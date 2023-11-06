@@ -4,16 +4,16 @@ import offersStuff from "@/public/dummy-backend/offers.json"
 
 export default function App({ Component, pageProps }) {
 
-  const renderOffers = () => {
-    return offersStuff.map(offerThing => {
-      return <OfferCard
-              info={offerThing}
-            />
-    })
-  }
+  // const renderOffers = () => {
+  //   return offersStuff.map(offerThing => {
+  //     return <OfferCard
+  //             info={offerThing}
+  //           />
+  //   })
+  // }
 
   return (<>
     <Header name="Comgood"></Header>
-    {renderOffers()}
+    {/* {renderOffers()} */}
   </>)
 }

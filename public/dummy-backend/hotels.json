@@ -1,0 +1,44 @@
+[
+    {
+        "name": "Borupgaarden",
+        "city": "Snekkersten",
+        "area": "Sjælland",
+        "rooms" : [{
+            "type":"Standart double room",
+            "size":"16 sqm",
+            "price": "1500"
+        },
+        {
+            "type":"Standart twin room",
+            "size":"20 sqm",
+            "price": "1200"
+        },
+        {
+            "type":"Suite",
+            "size":"30 sqm",
+            "price": "2000"
+        }]
+
+    },
+    {
+        "name": "Middelfart",
+        "city": "Middelfart",
+        "area": "Fyn",
+        "rooms" : [{
+            "type":"Standart room",
+            "size":"20 sqm",
+            "price": "1000"
+        },
+        {
+            "type":"Standart plus room",
+            "size":"25 sqm",
+            "price": "1200"
+        },
+        {
+            "type":"Suite",
+            "size":"30 sqm",
+            "price": "2000"
+        }]
+
+    }
+]
