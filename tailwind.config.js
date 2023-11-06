@@ -11,7 +11,13 @@ module.exports = {
         'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
         'gradient-conic':
           'conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))',
+        'hero': 'url(/images/hero.webp)'
       },
+      colors: {
+        'active-gray': '#252C2F',
+        'brdr-gray': '#E0E0E0',
+        'active-black': '#161D20'
+      }
     },
   },
   plugins: [],
