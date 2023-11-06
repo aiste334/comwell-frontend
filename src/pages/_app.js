@@ -13,7 +13,7 @@ export default function App({ Component, pageProps }) {
   // }
 
   return (<>
-    <Header name="Comgood"></Header>
+    <Header />
     {/* {renderOffers()} */}
   </>)
 }

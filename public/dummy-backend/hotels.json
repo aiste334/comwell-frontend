@@ -3,6 +3,7 @@
         "name": "Borupgaarden",
         "city": "Snekkersten",
         "area": "Sjælland",
+        "image": "@public/images/borup.svg",
         "rooms" : [{
             "type":"Standart double room",
             "size":"16 sqm",
@@ -24,6 +25,7 @@
         "name": "Middelfart",
         "city": "Middelfart",
         "area": "Fyn",
+        "image": "@public/images/middelfart.svg",
         "rooms" : [{
             "type":"Standart room",
             "size":"20 sqm",
