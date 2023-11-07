@@ -1,6 +1,6 @@
+/* eslint-disable jsx-a11y/alt-text */
 import { useState } from "react"
-import logoSvg from "@/public/logos/logo.svg"
-import Image from "next/image"
+import LogoSvg from "@/public/logos/logo.svg"
 import Link from "next/link"
 import HeaderButton from "./HeaderButton"
 import dropdownIcon from "@/public/icons/dropdown.svg"
@@ -26,14 +26,14 @@ const Header = ({ }) => {
 
     return (
         <>
-            <div className={" w-full h-[68px] flex items-center px-12 justify-between bg-black"}>
+            <div className={"sticky z-20 top-0 w-full h-[68px] flex items-center px-12 justify-between bg-black"}>
                 <Link href="/">
-                    <Image src={logoSvg}/>
+                    <LogoSvg/>
                 </Link>
                 <div className="flex gap-6">
-                    <HeaderButton onClick={displayHotels} >Lokationer <Image src={dropdownIcon}/></HeaderButton>
-                    <HeaderButton onClick={() => {}} >Profil <Image src={profileIcon}/></HeaderButton>
-                    <HeaderButton onClick={() => {}} >Menu <Image src={menuIcon}/></HeaderButton>
+                    <HeaderButton onClick={displayHotels} >Lokationer <DropdownIcon/></HeaderButton>
+                    <HeaderButton onClick={() => {}} >Profil <ProfileIcon/></HeaderButton>
+                    <HeaderButton onClick={() => {}} >Menu <MenuIcon/></HeaderButton>
                 </div>
             </div>
             <Drawer
