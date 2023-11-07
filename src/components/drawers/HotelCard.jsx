@@ -1,5 +1,7 @@
 import React from 'react'
-import backarrow from "@/public/icons/checkbox.svg"
+import CheckBoxSvg from "@/public/icons/checkbox.svg"
+import BackArrowSvg from "@/public/icons/backarrow.svg"
+
 import Image from "next/image"
 
 function HotelCard({ name, city, onButtonClick }) {
@@ -18,10 +20,11 @@ function HotelCard({ name, city, onButtonClick }) {
                 </div>
                 <div className="col-span-1 flex w-full flex-col pl-2 text-left ">
                     <span className='text-sm font-semibold'>{name}</span>
+                    
                     <span className='text-xs text-slate-600'>{city}</span>
                 </div>
                 <div className="col-span-1 absolute right-2  overflow-hidden rounded-full bg-black text-white !border-0">
-                <Image src={backarrow}/>
+                <CheckBoxSvg/>
                 </div>
             </button>
         </li>

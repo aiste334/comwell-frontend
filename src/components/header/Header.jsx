@@ -3,9 +3,9 @@ import { useState } from "react"
 import LogoSvg from "@/public/logos/logo.svg"
 import Link from "next/link"
 import HeaderButton from "./HeaderButton"
-import dropdownIcon from "@/public/icons/dropdown.svg"
-import profileIcon from "@/public/icons/profile.svg"
-import menuIcon from "@/public/icons/menu.svg"
+import DropdownIcon from "@/public/icons/dropdown.svg"
+import ProfileIcon from "@/public/icons/profile.svg"
+import MenuIcon from "@/public/icons/menu.svg"
 import Drawer from 'react-modern-drawer'
 import 'react-modern-drawer/dist/index.css'
 import HotelDrawerContent from "../drawers/HotelDrawerContent"

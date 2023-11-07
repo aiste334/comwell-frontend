@@ -3,6 +3,8 @@ import TabButton from "./TabButton"
 
 const TabGroup = ({ children, className }) => {
 
+  if(!children.length) return
+
   const tabs = children.filter(child => child.type.name === 'Tab')
   const defaultActiveTab = tabs.find(tab => tab.props.active) || 0
 
@@ -26,7 +28,7 @@ const TabGroup = ({ children, className }) => {
 
   return (
     <div className={className}>
-      <div className='flex gap-2 flex-wrap py-4'>{renderTabButtons()}</div>
+      <div className='flex gap-1 flex-wrap py-4'>{renderTabButtons()}</div>
       {renderActiveTab()}
     </div>
   )
