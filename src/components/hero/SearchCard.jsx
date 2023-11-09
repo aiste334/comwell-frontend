@@ -7,10 +7,13 @@ import PrimaryButton from '@/src/components/ui/buttons/PrimaryButton'
 import SearchSvg from '@/public/icons/search.svg'
 import SideDrawer from '../side-drawer/SideDrawer'
 import { useState } from 'react'
+import HotelDrawerContent from '../drawers/HotelDrawerContent'
+import NarrowDrawer from '../side-drawer/NarrowDrawer'
 
 const SearchCard = ({ className }) => {
 
   const [drawer, setDrawer] = useState()
+
 
   return (
     <>
@@ -34,7 +37,10 @@ const SearchCard = ({ className }) => {
 
     </div>
     <SideDrawer isOpen={drawer === 'hotel'} onClose={() => setDrawer()}>
-      <Heading>Hotels</Heading>
+      <NarrowDrawer>
+        <HotelDrawerContent />
+
+      </NarrowDrawer>
     </SideDrawer>
     <SideDrawer isOpen={drawer === 'rooms'} onClose={() => setDrawer()}>
       <Heading>Rooms</Heading>

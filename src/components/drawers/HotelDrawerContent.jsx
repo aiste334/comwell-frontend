@@ -10,16 +10,15 @@ import PrimaryButton from '../ui/buttons/PrimaryButton'
 
 function HotelDrawerContent({ closeDrawer }) {
 
-    const [ selectedFilter, setSelectedFilter ] = useState('alle')
-    const [ selectedHotel, setSelectedHotel ] = useState()  
+    const [selectedHotel, setSelectedHotel] = useState(null);
 
     function closeHotelDrawer() {
         closeDrawer(); // Close the drawer by calling the function from props
     }
 
     function handleCardClick(hotelName) {
-        console.log(`Card clicked: ${hotelName}`);
-      }
+        setSelectedHotel(hotelName); // Set the selected hotel
+    }
 
     const renderHotels = (area) => {
         const filteredHotels = area ? hotelData.filter(hotel => hotel.area === area) : hotelData
@@ -28,6 +27,7 @@ function HotelDrawerContent({ closeDrawer }) {
               key={hotel.name}
               name={hotel.name}
               city={hotel.city}
+              isSelected={selectedHotel === hotel.name} // Pass isSelected prop
               onButtonClick={() => handleCardClick(hotel.name)}
             />
           )})
