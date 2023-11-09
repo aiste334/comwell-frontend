@@ -16,8 +16,13 @@ module.exports = {
       },
       colors: {
         'active-gray': '#252C2F',
-        'brdr-gray': '#E0E0E0',
+        'cw-gray-600': '#000000A6',
+        'cw-gray-300': '#E0E0E0',
+        'cw-gray-200': '#E1E1E5',
         'active-black': '#161D20'
+      },
+      fontFamily: {
+        fellix: ['var(--font-fellix)']
       }
     },
   },

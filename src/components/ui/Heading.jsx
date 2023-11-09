@@ -1,6 +1,6 @@
-const Heading = ({ children }) => {
+const Heading = ({ children, className }) => {
   return (
-    <h2 className='text-4xl font-semibold'>{children}</h2>
+    <h2 className={`text-4xl font-semibold ${className}`}>{children}</h2>
   )
 }
 
