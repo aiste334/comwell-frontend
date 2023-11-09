@@ -3,7 +3,7 @@ import React from 'react'
 function NarrowDrawer({children}) {
   return (
 
-    <div className='w-[360px] h-full bg-narrowsuggestion'>
+    <div className='w-[360px] h-full'>
         {children}
     </div>
   )
