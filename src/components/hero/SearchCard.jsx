@@ -5,10 +5,8 @@ import Select from '@/src/components/ui/select/Select'
 import DoubleSelect from '@/src/components/ui/select/DoubleSelect'
 import PrimaryButton from '@/src/components/ui/buttons/PrimaryButton'
 import SearchSvg from '@/public/icons/search.svg'
-import SideDrawer from '../side-drawer/SideDrawer'
 import { useState } from 'react'
-import CloseButton from '../ui/buttons/circle-buttons/CloseButton'
-import RoomSelectionList from '../drawers/room-selection/RoomSelectionList'
+import OccupancySelection from '../drawers/occupancy-selection/OccupancySelection'
 import { getTodayDate, getTomorrowDate, formatToMonthDay } from '@/src/utils/dates'
 import ShortSideDrawer from '../side-drawer/ShortSideDrawer'
 import DateSelection from '../drawers/date-selection/DateSelection'
@@ -63,7 +61,7 @@ const SearchCard = ({ className }) => {
     </ShortSideDrawer>
 
     <ShortSideDrawer isOpen={drawer === 'rooms'} onClose={closeDrawer}>
-      <RoomSelectionList rooms={rooms} setRooms={setRooms} onClose={closeDrawer}/>
+      <OccupancySelection rooms={rooms} setRooms={setRooms} onClose={closeDrawer}/>
     </ShortSideDrawer>
 
     <ShortSideDrawer isOpen={drawer === 'dates'} onClose={closeDrawer}>

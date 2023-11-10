@@ -1,8 +1,7 @@
-import { useEffect } from "react"
 import SelectGuestCount from "./SelectGuestCount"
 import Label from "../../ui/text/Label"
 
-const RoomSelection = ({ name, room, setRoom, removeRoom, isFirst = false }) => {
+const OccupancySelection = ({ name, room, setRoom, removeRoom, isFirst = false }) => {
 
   if(!room) return null
   
@@ -48,4 +47,4 @@ const RoomSelection = ({ name, room, setRoom, removeRoom, isFirst = false }) => 
   )
 }
 
-export default RoomSelection
+export default OccupancySelection
