@@ -1,6 +1,7 @@
 /* eslint-disable jsx-a11y/alt-text */
 import Header from "@/src/components/header/Header"
 import "@/src/styles/globals.css"
+import "@/src/styles/datepicker.css"
 import SearchCard from "../components/hero/SearchCard"
 import localFont from 'next/font/local'
 

@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react'
-import Heading from '../../ui/Heading'
+import Heading from '../../ui/text/Heading'
 import DrawerPrimaryButton from '../../ui/buttons/DrawerPrimaryButton'
 import RoomSelection from './RoomSelection'
 import InfoSvg from '@/public/icons/info.svg'

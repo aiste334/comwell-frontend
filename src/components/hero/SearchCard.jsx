@@ -1,4 +1,4 @@
-import Heading from '@/src/components/ui/Heading'
+import Heading from '@/src/components/ui/text/Heading'
 import TabGroup from '@/src/components/ui/tabs/TabGroup'
 import Tab from '@/src/components/ui/tabs/Tab'
 import Select from '@/src/components/ui/select/Select'
@@ -9,6 +9,9 @@ import SideDrawer from '../side-drawer/SideDrawer'
 import { useState } from 'react'
 import CloseButton from '../ui/buttons/circle-buttons/CloseButton'
 import RoomSelectionList from '../drawers/room-selection/RoomSelectionList'
+import { getTodayDate, getTomorrowDate, formatToMonthDay } from '@/src/utils/dates'
+import ShortSideDrawer from '../side-drawer/ShortSideDrawer'
+import DateSelection from '../drawers/date-selection/DateSelection'
 
 const SearchCard = ({ className }) => {
 
@@ -18,12 +21,21 @@ const SearchCard = ({ className }) => {
     toddlers: 0
   }
 
+  const INITIAL_DATES = {
+    start: getTodayDate(),
+    end: getTomorrowDate()
+  }
+
   const [drawer, setDrawer] = useState()
   const closeDrawer = () => setDrawer()
 
   const [rooms, setRooms] = useState([INITIAL_ROOM])
   const roomCount = rooms.length
   const guestCount = rooms.reduce((prev, curr) => prev += curr.adults + curr.children + curr.toddlers, 0)
+
+  const [dates, setDates] = useState(INITIAL_DATES)
+  const startDateString = dates?.start ? formatToMonthDay(dates.start) : 'Select date'
+  const endDateString = dates?.end ? formatToMonthDay(dates.end) : 'Select date'
 
   return (
     <>
@@ -33,9 +45,9 @@ const SearchCard = ({ className }) => {
         <Tab title="Overnatning" className="flex flex-col gap-3">
           <Select title="Hotel" onClick={() => {setDrawer('hotel')}}>Select hotel</Select>
           <Select title="Rooms" onClick={() => {setDrawer('rooms')}}>{roomCount} Room, {guestCount} Person</Select>
-          <DoubleSelect titles={["Check-in", "Check-out"]} values={["Nov 6", "Nov 7"]} onClick={() => {setDrawer('dates')}}/>
+          <DoubleSelect titles={["Check-in", "Check-out"]} values={[startDateString, endDateString]} onClick={() => {setDrawer('dates')}}/>
           <PrimaryButton>
-            Book
+            Search
             <SearchSvg className="w-4 h-4"/>
           </PrimaryButton>
         </Tab>
@@ -46,19 +58,17 @@ const SearchCard = ({ className }) => {
       </TabGroup>
 
     </div>
-    <SideDrawer isOpen={drawer === 'hotel'} onClose={closeDrawer} className="w-[400px]">
-      <CloseButton className="absolute top-7 right-4" onClick={closeDrawer}/>
+    <ShortSideDrawer isOpen={drawer === 'hotel'} onClose={closeDrawer}>
       <Heading>Hotels</Heading>
-    </SideDrawer>
-    <SideDrawer isOpen={drawer === 'rooms'} onClose={closeDrawer} className="w-[400px]">
-      <RoomSelectionList rooms={rooms} setRooms={setRooms} onClose={closeDrawer}/>
-      <CloseButton className="absolute top-7 right-4" onClick={closeDrawer}/>
-    </SideDrawer>
-    <SideDrawer isOpen={drawer === 'dates'} onClose={closeDrawer} className="w-[400px]">
-      <CloseButton className="absolute top-7 right-4" onClick={closeDrawer}/>
-      <Heading>Dates</Heading>
+    </ShortSideDrawer>
 
-    </SideDrawer>
+    <ShortSideDrawer isOpen={drawer === 'rooms'} onClose={closeDrawer}>
+      <RoomSelectionList rooms={rooms} setRooms={setRooms} onClose={closeDrawer}/>
+    </ShortSideDrawer>
+
+    <ShortSideDrawer isOpen={drawer === 'dates'} onClose={closeDrawer}>
+      <DateSelection dates={dates} setDates={setDates} onClose={closeDrawer}/>
+    </ShortSideDrawer>
     </>
   )
 }

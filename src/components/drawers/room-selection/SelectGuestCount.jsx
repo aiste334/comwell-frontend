@@ -2,7 +2,7 @@ import React, { useEffect } from 'react'
 import MinusButton from '../../ui/buttons/circle-buttons/MinusButton'
 import PlusButton from '../../ui/buttons/circle-buttons/PlusButton'
 
-const SelectGuestCount = ({ title = "", subtitle = "", count, setCount, totalGuestCount }) => {
+const SelectGuestCount = ({ title = "", subtitle = "", count, setCount, totalGuestCount, minAllowed = 0 }) => {
   return (
     <div className='flex items-center gap-2'>
       <div className='mr-auto flex flex-col'>
@@ -10,11 +10,11 @@ const SelectGuestCount = ({ title = "", subtitle = "", count, setCount, totalGue
         <span className="text-sm">{subtitle}</span>
       </div>
 
-      <MinusButton onClick={() => setCount(count-1)} disabled={count <= 0}/>
+      <MinusButton onClick={() => setCount(count-1)} disabled={count <= minAllowed}/>
       <input 
         type="number"
         value={count}
-        onChange={(e) => setCount(parseInt(e.target.value) + parseInt(count*0) || 0)}
+        onChange={(e) => setCount(parseInt(e.target.value) + parseInt(count*0) || minAllowed)}
         className='w-8 h-8 rounded-full text-center align-middle border-cw-gray-300 focus:border-black border-[1px]'
       />
       <PlusButton onClick={() => setCount(count+1)} disabled={totalGuestCount >= 4}/>

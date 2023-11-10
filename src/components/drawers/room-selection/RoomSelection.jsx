@@ -1,5 +1,6 @@
 import { useEffect } from "react"
 import SelectGuestCount from "./SelectGuestCount"
+import Label from "../../ui/text/Label"
 
 const RoomSelection = ({ name, room, setRoom, removeRoom, isFirst = false }) => {
 
@@ -10,7 +11,7 @@ const RoomSelection = ({ name, room, setRoom, removeRoom, isFirst = false }) => 
   return (
     <div className='flex flex-col p-2 py-8 first:pt-0 border-b-[1px] border-b-cw-gray-300 last:border-b-0 last:border-b-transparent'>
       <div className='flex justify-between items-center mb-4'>
-        <span className='text-[11px] uppercase font-semibold leading-3 tracking-wider'>Room {name}</span>
+        <Label>Room {name}</Label>
         { !isFirst && 
           <span className='text-[13px] underline cursor-pointer leading-3'
             onClick={removeRoom}
@@ -23,6 +24,7 @@ const RoomSelection = ({ name, room, setRoom, removeRoom, isFirst = false }) => 
           subtitle="" 
           count={room.adults} 
           setCount={(v) => setRoom(prev => ({ ...prev, adults: v }))}
+          minAllowed={1}
           totalGuestCount={totalGuestCount}
         />
 
