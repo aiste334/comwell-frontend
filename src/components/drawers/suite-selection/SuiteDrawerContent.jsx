@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import Heading from '../../ui/Heading'
+import Heading from '../../ui/text/Heading'
 import Title from '../../ui/Title'
 import SuiteCard from './SuiteCard'
 import hotelData from "@/public/dummy-backend/hotels.json"
