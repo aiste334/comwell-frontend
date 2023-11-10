@@ -1,11 +1,10 @@
-import { useEffect, useState } from 'react'
 import Heading from '../../ui/text/Heading'
 import DrawerPrimaryButton from '../../ui/buttons/DrawerPrimaryButton'
-import RoomSelection from './RoomSelection'
+import OccupancyRoomSelection from './OccupancyRoomSelection'
 import InfoSvg from '@/public/icons/info.svg'
 import PlusButton from '../../ui/buttons/circle-buttons/PlusButton'
 
-const RoomSelectionList = ({ rooms, setRooms, onClose }) => {
+const OccupancySelection = ({ rooms, setRooms, onClose }) => {
 
   const MAX_ROOMS = 9
 
@@ -44,7 +43,7 @@ const RoomSelectionList = ({ rooms, setRooms, onClose }) => {
         setRooms(prev => prev.filter((r, i) => i !== index))
       }
 
-      return <RoomSelection 
+      return <OccupancyRoomSelection 
               key={index} 
               name={index+1} 
               room={room} 
@@ -99,4 +98,4 @@ const RoomSelectionList = ({ rooms, setRooms, onClose }) => {
   )
 }
 
-export default RoomSelectionList
+export default OccupancySelection
