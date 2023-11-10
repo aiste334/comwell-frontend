@@ -34,7 +34,7 @@ const SideDrawer = ({ isOpen, onClose = () => {}, children, animationDuration = 
 
   return ReactDOM.createPortal(
     <div className={`font-fellix z-50 fixed top-0 left-0 w-screen h-screen cursor-pointer transition-all duration-[${animationDuration}ms] bg-black/${coverOpacity}`} onClick={handleClose}>
-      <div className={`fixed top-0 right-0 min-w-[360px] bg-white h-full ml-auto px-4 pt-8 cursor-default transition-all duration-[${animationDuration}ms] ${translateSnippet} ${className}`} onClick={(e) => {e.stopPropagation()}}>
+      <div className={`overflow-scroll fixed top-0 right-0 min-w-[360px] bg-white h-full ml-auto px-4 pt-8 cursor-default transition-all duration-[${animationDuration}ms] ${translateSnippet} ${className}`} onClick={(e) => {e.stopPropagation()}}>
         {children}
       </div>
     </div>,

@@ -8,13 +8,10 @@ import Tab from '../ui/tabs/Tab'
 import PrimaryButton from '../ui/buttons/PrimaryButton'
 
 
-function HotelDrawerContent({ closeDrawer }) {
+function HotelDrawerContent() {
 
     const [selectedHotel, setSelectedHotel] = useState(null);
 
-    function closeHotelDrawer() {
-        closeDrawer(); // Close the drawer by calling the function from props
-    }
 
     function handleCardClick(hotelName) {
         setSelectedHotel(hotelName); // Set the selected hotel
@@ -27,6 +24,7 @@ function HotelDrawerContent({ closeDrawer }) {
               key={hotel.name}
               name={hotel.name}
               city={hotel.city}
+              image={hotel.image}
               isSelected={selectedHotel === hotel.name} // Pass isSelected prop
               onButtonClick={() => handleCardClick(hotel.name)}
             />
@@ -35,7 +33,6 @@ function HotelDrawerContent({ closeDrawer }) {
 
   return (
     <div className='flex flex-col h-full'>
-        <button onClick={closeHotelDrawer} className='p-2'><BackArrowSvg/></button>
         <h1 className="text-3xl font-semibold p-3">Hoteller</h1>
 
         <TabGroup className="flex-1">

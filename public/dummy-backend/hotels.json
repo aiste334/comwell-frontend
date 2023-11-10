@@ -3,16 +3,18 @@
         "name": "Borupgaarden",
         "city": "Snekkersten",
         "area": "Sjælland",
-        "image": "@public/images/borup.svg",
+        "image": "@/public/images/borup.svg",
         "rooms" : [{
             "type":"Standart double room",
             "size":"16 sqm",
-            "price": "1500"
+            "price": "1500",
+            "description": "Vores standart har to senge, der er skubbet sammen. Her er to badeværelser. Et med bruser og toilet og et med badekar. På værelset finder du fladskærms-tv, telefon, skrivebord, sofa og lænestol. Der er strygejern og -bræt samt deponeringsboks i garderoben. Superior-værelserne er beliggende på 2.-8. sal. Evt. 3 & 4 gæst er opredninger"
         },
         {
             "type":"Standart twin room",
             "size":"20 sqm",
-            "price": "1200"
+            "price": "1200",
+            "description": "Vores twin har to senge, der er skubbet sammen. Her er to badeværelser. Et med bruser og toilet og et med badekar. På værelset finder du fladskærms-tv, telefon, skrivebord, sofa og lænestol. Der er strygejern og -bræt samt deponeringsboks i garderoben. Superior-værelserne er beliggende på 2.-8. sal. Evt. 3 & 4 gæst er opredninger"
         },
         {
             "type":"Suite",
@@ -25,7 +27,7 @@
         "name": "Middelfart",
         "city": "Middelfart",
         "area": "Fyn",
-        "image": "@public/images/middelfart.svg",
+        "image": "@/public/images/middelfart.svg",
         "rooms" : [{
             "type":"Standart room",
             "size":"20 sqm",
