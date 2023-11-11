@@ -17,6 +17,8 @@ module.exports = {
       colors: {
         'footer-gray': '#252c2f',
         'footer-dark': '#161d20',
+        'button-dark': '#182b39',
+        "light-grey-font" :"#8b959c",
       },
     },
   },
