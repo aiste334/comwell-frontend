@@ -1,14 +1,12 @@
 import React, { useState } from 'react'
 import Heading from '../../ui/text/Heading'
-import Title from '../../ui/Title'
 import RoomCard from './RoomCard'
-import hotelData from "@/public/dummy-backend/hotels.json"
-import { formatToMonthDay } from '@/src/utils/dates'
 import CalendarSvg from "@/public/icons/calendar.svg"
 import BustSvg from "@/public/icons/bust.svg"
 import RoomDrawerHeaderInfo from './RoomDrawerHeaderInfo'
 import LocationPointerSvg from "@/public/icons/locationpointer.svg"
 import BedSvg from "@/public/icons/bed.svg"
+import STitle from '../../ui/STitle'
 
 
 function RoomDrawerContent({ selectedHotel, roomCount, guestCount, startDateString, endDateString }) {
@@ -16,7 +14,7 @@ function RoomDrawerContent({ selectedHotel, roomCount, guestCount, startDateStri
 
 
   function handleSuiteCardClick(room) {
-    setSelectedRoom(room); // Set the selected suite
+    setSelectedRoom(room);
   }
 
   const renderRooms = () => {
@@ -54,7 +52,9 @@ function RoomDrawerContent({ selectedHotel, roomCount, guestCount, startDateStri
             <div className="flex flex-col justify-end gap-y-0.5">
               <span className="room-label ml-auto block w-max lowercase">1 Værelse</span>
               <div className="whitespace-nowrap price">
-                <span>{`${selectedRoom ? selectedRoom.price + " kr." : " "}`}</span>
+                <STitle textColor='black'>
+                  {`${selectedRoom ? selectedRoom.price + " kr." : " "}`}
+                </STitle>
               </div>
             </div>
             <div className="flex h-[36px] w-[36px] items-center justify-center rounded-full bg-white md:bg-theme-10">
