@@ -1,12 +1,9 @@
-import BackArrowSvg from "@/public/icons/backarrow.svg"
+import BackArrowSvg from '@/public/icons/action-circles/backarrow.svg'
 
-const BackArrowButton = ({ className, onClick, ...otherProps }) => {
+import RoundButton from './CircleButton'
 
-  return (
-    <div {...otherProps} onClick={onClick} className={className} >
-      <BackArrowSvg className='cursor-pointer'/>
-    </div>
-  )
+const BackArrowButton = (props) => {
+  return <RoundButton {...props} Icon={BackArrowSvg}/>
 }
 
 export default BackArrowButton

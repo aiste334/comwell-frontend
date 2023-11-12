@@ -3,23 +3,25 @@
         "name": "Borupgaarden",
         "city": "Snekkersten",
         "area": "Sjælland",
-        "image": "@/public/images/borup.svg",
+        "image": "/images/borup.svg",
         "rooms" : [{
-            "type":"Standart double room",
-            "size":"16 sqm",
+            "type":"Standard double room",
+            "size":"16",
             "price": "1500",
-            "description": "Vores standart har to senge, der er skubbet sammen. Her er to badeværelser. Et med bruser og toilet og et med badekar. På værelset finder du fladskærms-tv, telefon, skrivebord, sofa og lænestol. Der er strygejern og -bræt samt deponeringsboks i garderoben. Superior-værelserne er beliggende på 2.-8. sal. Evt. 3 & 4 gæst er opredninger"
+            "description": "Vores standard har to senge, der er skubbet sammen. Her er to badeværelser. Et med bruser og toilet og et med badekar. På værelset finder du fladskærms-tv, telefon, skrivebord, sofa og lænestol. Der er strygejern og -bræt samt deponeringsboks i garderoben. Superior-værelserne er beliggende på 2.-8. sal. Evt. 3 & 4 gæst er opredninger"
         },
         {
-            "type":"Standart twin room",
-            "size":"20 sqm",
+            "type":"Standard twin room",
+            "size":"20",
             "price": "1200",
             "description": "Vores twin har to senge, der er skubbet sammen. Her er to badeværelser. Et med bruser og toilet og et med badekar. På værelset finder du fladskærms-tv, telefon, skrivebord, sofa og lænestol. Der er strygejern og -bræt samt deponeringsboks i garderoben. Superior-værelserne er beliggende på 2.-8. sal. Evt. 3 & 4 gæst er opredninger"
         },
         {
             "type":"Suite",
-            "size":"30 sqm",
-            "price": "2000"
+            "size":"30",
+            "price": "2000",
+            "description": "Vores standard har to senge, der er skubbet sammen. Her er to badeværelser. Et med bruser og toilet og et med badekar. På værelset finder du fladskærms-tv, telefon, skrivebord, sofa og lænestol. Der er strygejern og -bræt samt deponeringsboks i garderoben. Superior-værelserne er beliggende på 2.-8. sal. Evt. 3 & 4 gæst er opredninger"
+
         }]
 
     },
@@ -27,21 +29,24 @@
         "name": "Middelfart",
         "city": "Middelfart",
         "area": "Fyn",
-        "image": "@/public/images/middelfart.svg",
+        "image": "/images/middelfart.svg",
         "rooms" : [{
-            "type":"Standart room",
-            "size":"20 sqm",
-            "price": "1000"
+            "type":"Standard room",
+            "size":"20",
+            "price": "1000",
+            "description": "Vores standart har to senge, der er skubbet sammen. Her er to badeværelser. Et med bruser og toilet og et med badekar. På værelset finder du fladskærms-tv, telefon, skrivebord, sofa og lænestol. Der er strygejern og -bræt samt deponeringsboks i garderoben. Superior-værelserne er beliggende på 2.-8. sal. Evt. 3 & 4 gæst er opredninger"
         },
         {
-            "type":"Standart plus room",
-            "size":"25 sqm",
-            "price": "1200"
+            "type":"Standard plus room",
+            "size":"25",
+            "price": "1200",
+            "description": "Vores standart plus har to senge, der er skubbet sammen. Her er to badeværelser. Et med bruser og toilet og et med badekar. På værelset finder du fladskærms-tv, telefon, skrivebord, sofa og lænestol. Der er strygejern og -bræt samt deponeringsboks i garderoben. Superior-værelserne er beliggende på 2.-8. sal. Evt. 3 & 4 gæst er opredninger"
         },
         {
             "type":"Suite",
-            "size":"30 sqm",
-            "price": "2000"
+            "size":"30",
+            "price": "2000",
+            "description": "Vores suite har to senge, der er skubbet sammen. Her er to badeværelser. Et med bruser og toilet og et med badekar. På værelset finder du fladskærms-tv, telefon, skrivebord, sofa og lænestol. Der er strygejern og -bræt samt deponeringsboks i garderoben. Superior-værelserne er beliggende på 2.-8. sal. Evt. 3 & 4 gæst er opredninger"
         }]
 
     }

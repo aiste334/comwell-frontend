@@ -2,14 +2,16 @@ import React, { useState } from 'react'
 import Title from '../../ui/Title'
 import STitle from '../../ui/STitle'
 import SuiteDescription from '../../ui/SuiteDescription'
+import CheckMarkSvg from "@/public/icons/action-circles/checkmark.svg"
 
 function SuiteCard({onButtonClick, isSelected, description, type, price, size }) {
 
-    const cardClassName = isSelected ? 'outline-slate-600' : 'outline-slate-200';
+    const cardClassName = isSelected ? 'border-slate-800' : 'border-slate-200'
+
 
   return (
         <>
-            <button type="button" onClick={onButtonClick} className={`rounded-lg input relative flex w-full flex-col overflow-hidden !p-0 outline-black ring-black lg:flex-row lg:items-stretch ${cardClassName}`} >
+            <button type="button" onClick={onButtonClick} className={`rounded-lg input relative flex w-full flex-col overflow-hidden hover:border-slate-400 border lg:flex-row lg:items-stretch ${cardClassName}`} >
                 <div className="relative h-[200px] w-full lg:h-[242px]">
                     <div className="module-richMedia relative block h-full w-full overflow-hidden bg-gray-200">
                         <picture>
@@ -18,14 +20,14 @@ function SuiteCard({onButtonClick, isSelected, description, type, price, size })
                             <img src="https://cdn.dwarf.dk/comwell-cms-production/img/containers/main/hoteller/cbo/udendoers/comwell-borupgaard-ude-03.jpg/a1cb77019284d0b93b2dd2a74eed578f.jpg" className="h-full w-full object-cover" alt="" width="38" height="31" decoding="sync" loading="eager" fetchpriority="auto"/>
                         </picture>
                     </div>
-                    <div className="trumpet max-lg:right-[var(--form-input-padding-x)] absolute top-[var(--form-input-padding-y)] rounded-full bg-white px-2.5 py-1.5 lowercase lg:left-[var(--form-input-padding-x)] lg:top-[var(--form-input-padding-x)]">
-                        {size}
-                        <sup>2</sup>
+                    <div className="absolute top-[10px] left-[10px] rounded-full bg-white px-2.5 py-1.5 lowercase text-xs font-semibold">
+                        {size} 
+                        <sup> m2</sup>
                     </div>
                     </div>
                     <div className="relative flex w-full flex-col justify-between px-[8px] pt-4 pb-[10px] text-left">
                         <STitle>{type}</STitle>
-                        <SuiteDescription>{description} test</SuiteDescription>
+                        <SuiteDescription>{description}</SuiteDescription>
                         <div className='h-1/3 w-1/2 rounded-lg bg-slate-100 '>
                         </div>
                         <Title>{price} kr.</Title>
@@ -36,8 +38,9 @@ function SuiteCard({onButtonClick, isSelected, description, type, price, size })
 
                         </div>
                     
-                    <button className="absolute right-[var(--form-input-padding-x)] top-4 flex h-[24px] w-[24px] items-center justify-center overflow-hidden rounded-full transition border-[var(--form-input-color-gray)] border group-hover:border-black/[0.3]">
-                    </button>
+                        <div className={`absolute right-[12px] top-1/2 flex h-[24px] w-[24px] -translate-y-1/2 items-center justify-center overflow-hidden rounded-full bg-black text-white !border-0 `}>
+                         <CheckMarkSvg/>
+                        </div>
                 </div>
             </button>
         </>
