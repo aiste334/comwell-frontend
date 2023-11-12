@@ -3,23 +3,26 @@
         "name": "Borupgaarden",
         "city": "Snekkersten",
         "area": "Sjælland",
-        "image": "/images/borup.svg",
+        "image": "/images/hotelimages/borup.svg",
         "rooms" : [{
             "type":"Standard double room",
             "size":"16",
             "price": "1500",
+            "image": "/images/hotelimages/borup.svg",
             "description": "Vores standard har to senge, der er skubbet sammen. Her er to badeværelser. Et med bruser og toilet og et med badekar. På værelset finder du fladskærms-tv, telefon, skrivebord, sofa og lænestol. Der er strygejern og -bræt samt deponeringsboks i garderoben. Superior-værelserne er beliggende på 2.-8. sal. Evt. 3 & 4 gæst er opredninger"
         },
         {
             "type":"Standard twin room",
             "size":"20",
             "price": "1200",
+            "image": "/images/hotelimages/borup.svg",
             "description": "Vores twin har to senge, der er skubbet sammen. Her er to badeværelser. Et med bruser og toilet og et med badekar. På værelset finder du fladskærms-tv, telefon, skrivebord, sofa og lænestol. Der er strygejern og -bræt samt deponeringsboks i garderoben. Superior-værelserne er beliggende på 2.-8. sal. Evt. 3 & 4 gæst er opredninger"
         },
         {
             "type":"Suite",
             "size":"30",
             "price": "2000",
+            "image": "/images/hotelimages/borup.svg",
             "description": "Vores standard har to senge, der er skubbet sammen. Her er to badeværelser. Et med bruser og toilet og et med badekar. På værelset finder du fladskærms-tv, telefon, skrivebord, sofa og lænestol. Der er strygejern og -bræt samt deponeringsboks i garderoben. Superior-værelserne er beliggende på 2.-8. sal. Evt. 3 & 4 gæst er opredninger"
 
         }]
@@ -29,24 +32,34 @@
         "name": "Middelfart",
         "city": "Middelfart",
         "area": "Fyn",
-        "image": "/images/middelfart.svg",
+        "image": "/images/hotelimages/middelfart.svg",
         "rooms" : [{
             "type":"Standard room",
             "size":"20",
             "price": "1000",
+            "image": "/images/hotelimages/borup.svg",
             "description": "Vores standart har to senge, der er skubbet sammen. Her er to badeværelser. Et med bruser og toilet og et med badekar. På værelset finder du fladskærms-tv, telefon, skrivebord, sofa og lænestol. Der er strygejern og -bræt samt deponeringsboks i garderoben. Superior-værelserne er beliggende på 2.-8. sal. Evt. 3 & 4 gæst er opredninger"
         },
         {
             "type":"Standard plus room",
             "size":"25",
             "price": "1200",
+            "image": "/images/hotelimages/borup.svg",
             "description": "Vores standart plus har to senge, der er skubbet sammen. Her er to badeværelser. Et med bruser og toilet og et med badekar. På værelset finder du fladskærms-tv, telefon, skrivebord, sofa og lænestol. Der er strygejern og -bræt samt deponeringsboks i garderoben. Superior-værelserne er beliggende på 2.-8. sal. Evt. 3 & 4 gæst er opredninger"
         },
         {
             "type":"Suite",
             "size":"30",
             "price": "2000",
+            "image": "/images/hotelimages/borup.svg",
             "description": "Vores suite har to senge, der er skubbet sammen. Her er to badeværelser. Et med bruser og toilet og et med badekar. På værelset finder du fladskærms-tv, telefon, skrivebord, sofa og lænestol. Der er strygejern og -bræt samt deponeringsboks i garderoben. Superior-værelserne er beliggende på 2.-8. sal. Evt. 3 & 4 gæst er opredninger"
+        },
+        {
+            "type":"Room",
+            "size":"10",
+            "price": "1000",
+            "image": "/images/hotelimages/borup.svg",
+            "description": "Vores room har to senge, der er skubbet sammen. Her er to badeværelser. Et med bruser og toilet og et med badekar. På værelset finder du fladskærms-tv, telefon, skrivebord, sofa og lænestol. Der er strygejern og -bræt samt deponeringsboks i garderoben. Superior-værelserne er beliggende på 2.-8. sal. Evt. 3 & 4 gæst er opredninger"
         }]
 
     }

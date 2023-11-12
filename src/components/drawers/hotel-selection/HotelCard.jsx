@@ -1,7 +1,4 @@
 import React from 'react'
-
-import BackArrowButton from '../../ui/buttons/circle-buttons/BackArrowButton'
-
 import Image from "next/image"
 import CheckMarkSvg from "@/public/icons/action-circles/checkmark.svg"
 

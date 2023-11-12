@@ -19,18 +19,6 @@ function SuiteDrawerContent({ selectedHotel, roomCount, guestCount, startDateStr
     setSelectedSuite(suite); // Set the selected suite
   }
 
-  const getRoomsForHotel = (hotelName) => {
-    const hotel = hotelData.find(hotel => hotel.name === hotelName);
-
-    if (hotel) {
-        return hotel.rooms;
-    } else {
-        console.error(`Hotel with name "${hotelName}" not found.`);
-        return [];
-    }
-};
-
-
   const renderSuites = () => {
     return selectedHotel?.rooms.map(room => (
         <SuiteCard
@@ -38,9 +26,10 @@ function SuiteDrawerContent({ selectedHotel, roomCount, guestCount, startDateStr
             type={room.type}
             size={room.size}
             price={room.price}
+            image={room.image}
             description={room.description}
-            isSelected={selectedSuite === room.type}
-            onButtonClick={() => handleSuiteCardClick(room.type)}
+            isSelected={selectedSuite === room}
+            onButtonClick={() => handleSuiteCardClick(room)}
         />
     ));
   };
@@ -65,8 +54,7 @@ function SuiteDrawerContent({ selectedHotel, roomCount, guestCount, startDateStr
             <div className="flex flex-col justify-end gap-y-0.5">
               <span className="room-label ml-auto block w-max lowercase">1 Værelse</span>
               <div className="whitespace-nowrap price">
-                <span>0</span>
-                <span> kr.</span>
+                <span>{`${selectedSuite ? selectedSuite.price + " kr." : " "}`}</span>
               </div>
             </div>
             <div className="flex h-[36px] w-[36px] items-center justify-center rounded-full bg-white md:bg-theme-10">
