@@ -1,6 +1,6 @@
 import React from 'react'
 
-function SuiteDrawerHeaderInfo({ Icon, text }) {
+function RoomDrawerHeaderInfo({ Icon, text }) {
   return (
     <>
         <span className='border-r border-cw-gray-300 last:border-r-0 px-4 gap-2 flex items-center'>
@@ -11,4 +11,4 @@ function SuiteDrawerHeaderInfo({ Icon, text }) {
   )
 }
 
-export default SuiteDrawerHeaderInfo
+export default RoomDrawerHeaderInfo

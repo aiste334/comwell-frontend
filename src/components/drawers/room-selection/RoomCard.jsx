@@ -1,13 +1,13 @@
 import React, { useState } from 'react'
 import Title from '../../ui/Title'
 import STitle from '../../ui/STitle'
-import SuiteDescription from '../../ui/SuiteDescription'
+import RoomDescription from '../../ui/RoomDescription'
 import CheckMarkSvg from "@/public/icons/action-circles/checkmark.svg"
 import SmallFloater from '../../ui/SmallFloater'
 import Image from "next/image"
 
 
-function SuiteCard({onButtonClick, isSelected, description, type, price, image, size }) {
+function RoomCard({onButtonClick, isSelected, description, type, price, image, size }) {
 
     const cardClassName = isSelected ? 'border-slate-800' : 'border-slate-200'
 
@@ -25,7 +25,7 @@ function SuiteCard({onButtonClick, isSelected, description, type, price, image, 
                 </div>
                 <div className="relative flex w-full flex-col justify-between px-[8px] pt-4 pb-[10px] text-left">
                     <STitle textColor={'black'}>{type}</STitle>
-                    <SuiteDescription>{description}</SuiteDescription>
+                    <RoomDescription>{description}</RoomDescription>
                     <div className='h-1/3 w-1/2 rounded-lg bg-slate-100 '>
                     </div>
                     <Title>{price} kr.</Title>
@@ -40,4 +40,4 @@ function SuiteCard({onButtonClick, isSelected, description, type, price, image, 
     )
 }
 
-export default SuiteCard
+export default RoomCard

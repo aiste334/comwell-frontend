@@ -1,6 +1,5 @@
 import React from 'react'
 import Suggestion from './Suggestion'
-import WideSuggestion from './WideSuggestion'
 
 function SuggestionGroup() {
   return (

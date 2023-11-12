@@ -11,7 +11,7 @@ import OccupancySelection from '../drawers/occupancy-selection/OccupancySelectio
 import { getTodayDate, getTomorrowDate, formatToMonthDay } from '@/src/utils/dates'
 import ShortSideDrawer from '../side-drawer/ShortSideDrawer'
 import DateSelection from '../drawers/date-selection/DateSelection'
-import SuiteDrawerContent from '../drawers/suite-selection/SuiteDrawerContent'
+import RoomDrawerContent from '../drawers/room-selection/RoomDrawerContent'
 import BackArrowButton from '../ui/buttons/circle-buttons/BackArrowButton'
 import SideDrawer from '../side-drawer/SideDrawer'
 
@@ -77,7 +77,7 @@ const SearchCard = ({ className }) => {
     </ShortSideDrawer>
     <SideDrawer isOpen={drawer === 'suites'} onClose={closeDrawer} className="w-[900px]">
       <BackArrowButton className="absolute top-4 left-5" onClick={closeDrawer}/>
-      <SuiteDrawerContent selectedHotel={selectedHotel} roomCount={roomCount} guestCount={guestCount} startDateString={startDateString} endDateString={endDateString}/>
+      <RoomDrawerContent selectedHotel={selectedHotel} roomCount={roomCount} guestCount={guestCount} startDateString={startDateString} endDateString={endDateString}/>
     </SideDrawer>
     </>
   )
