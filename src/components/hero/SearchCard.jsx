@@ -14,6 +14,9 @@ import DateSelection from '../drawers/date-selection/DateSelection'
 import RoomDrawerContent from '../drawers/room-selection/RoomDrawerContent'
 import BackArrowButton from '../ui/buttons/circle-buttons/BackArrowButton'
 import SideDrawer from '../side-drawer/SideDrawer'
+import FormStepGroup from '../ui/form-steps/FormStepGroup'
+import FormStep from '../ui/form-steps/FormStep'
+import useFormSteps from '@/src/hooks/useFormSteps'
 
 
 const SearchCard = ({ className }) => {
