@@ -1,9 +1,7 @@
 import { useEffect, useState } from "react"
 import TabButton from "./TabButton"
 
-const TabGroup = ({ children, className }) => {
-
-  if(!children.length) return
+const TabGroup = ({ children, className, showDivider = false }) => {
 
   const tabs = children.filter(child => child.type.name === 'Tab')
   const defaultActiveTab = tabs.find(tab => tab.props.active) || 0
@@ -26,9 +24,15 @@ const TabGroup = ({ children, className }) => {
     return tabs[activeTab] || <span className="text-sm text-gray-600">No tab selected</span>
   }
 
+  if(!children.length) return
+
   return (
     <div className={className}>
-      <div className='flex gap-1 flex-wrap py-4'>{renderTabButtons()}</div>
+      <div className='flex gap-1 flex-wrap py-2'>{renderTabButtons()}</div>
+
+      { showDivider &&
+        <hr className="h-px my-2 bg-gray-200 border-0"/>
+      }
       {renderActiveTab()}
     </div>
   )

@@ -6,9 +6,10 @@ import HeaderButton from "./HeaderButton"
 import DropdownIcon from "@/public/icons/dropdown.svg"
 import ProfileIcon from "@/public/icons/profile.svg"
 import MenuIcon from "@/public/icons/menu.svg"
-import HotelDrawerContent from "../drawers/HotelDrawerContent"
+import HotelDrawerContent from "../drawers/hotel-selection/HotelDrawerContent"
 import LogInModal from "../modals/log-in-modal/LogInModal"
 import ShortSideDrawer from "../side-drawer/ShortSideDrawer"
+import { useState } from "react"
 
 const Header = ({ }) => {
 
