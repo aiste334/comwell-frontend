@@ -6,10 +6,15 @@ import DoubleSelect from '@/src/components/ui/select/DoubleSelect'
 import PrimaryButton from '@/src/components/ui/buttons/PrimaryButton'
 import SearchSvg from '@/public/icons/search.svg'
 import { useState } from 'react'
+import HotelDrawerContent from '../drawers/hotel-selection/HotelDrawerContent'
 import OccupancySelection from '../drawers/occupancy-selection/OccupancySelection'
 import { getTodayDate, getTomorrowDate, formatToMonthDay } from '@/src/utils/dates'
 import ShortSideDrawer from '../side-drawer/ShortSideDrawer'
 import DateSelection from '../drawers/date-selection/DateSelection'
+import RoomDrawerContent from '../drawers/room-selection/RoomDrawerContent'
+import BackArrowButton from '../ui/buttons/circle-buttons/BackArrowButton'
+import SideDrawer from '../side-drawer/SideDrawer'
+
 
 const SearchCard = ({ className }) => {
 
@@ -35,16 +40,19 @@ const SearchCard = ({ className }) => {
   const startDateString = dates?.start ? formatToMonthDay(dates.start) : 'Select date'
   const endDateString = dates?.end ? formatToMonthDay(dates.end) : 'Select date'
 
+  const [selectedHotel, setSelectedHotel] = useState(null);
+  const hotelString = selectedHotel ? selectedHotel.name : 'Select hotel'
+
   return (
     <>
     <div className={'bg-white rounded-2xl w-[530px] p-8 drop-shadow-lg ' + className}>
-      <Heading>Book mødelokale på Copenhagen Portside</Heading>
+      <Heading>Check ind på Comwell og kom ud i Danmark</Heading>
       <TabGroup className="py-2">
         <Tab title="Overnatning" className="flex flex-col gap-3">
-          <Select title="Hotel" onClick={() => {setDrawer('hotel')}}>Select hotel</Select>
+          <Select title="Hotel" onClick={() => {setDrawer('hotel')}}>{hotelString}</Select>
           <Select title="Rooms" onClick={() => {setDrawer('rooms')}}>{roomCount} Room, {guestCount} Person</Select>
           <DoubleSelect titles={["Check-in", "Check-out"]} values={[startDateString, endDateString]} onClick={() => {setDrawer('dates')}}/>
-          <PrimaryButton disabled={!rooms && !dates}>
+          <PrimaryButton disabled={!rooms && !dates} onClick={() => {setDrawer('suites')}}>
             Search
             <SearchSvg className="w-4 h-4"/>
           </PrimaryButton>
@@ -57,7 +65,7 @@ const SearchCard = ({ className }) => {
 
     </div>
     <ShortSideDrawer isOpen={drawer === 'hotel'} onClose={closeDrawer}>
-      <Heading>Hotels</Heading>
+      <HotelDrawerContent selectedHotel={selectedHotel} onClose={closeDrawer} setSelectedHotel={setSelectedHotel}/>
     </ShortSideDrawer>
 
     <ShortSideDrawer isOpen={drawer === 'rooms'} onClose={closeDrawer}>
@@ -67,6 +75,10 @@ const SearchCard = ({ className }) => {
     <ShortSideDrawer isOpen={drawer === 'dates'} onClose={closeDrawer}>
       <DateSelection dates={dates} setDates={setDates} onClose={closeDrawer}/>
     </ShortSideDrawer>
+    <SideDrawer isOpen={drawer === 'suites'} onClose={closeDrawer} className="w-[900px]">
+      <BackArrowButton className="absolute top-4 left-5" onClick={closeDrawer}/>
+      <RoomDrawerContent selectedHotel={selectedHotel} roomCount={roomCount} guestCount={guestCount} startDateString={startDateString} endDateString={endDateString}/>
+    </SideDrawer>
     </>
   )
 }

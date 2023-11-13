@@ -3,6 +3,7 @@ import Header from "@/src/components/header/Header"
 import "@/src/styles/globals.css"
 import "@/src/styles/datepicker.css"
 import SearchCard from "../components/hero/SearchCard"
+import SuggestionGroup from "../components/suggestions/SuggestionGroup"
 import localFont from 'next/font/local'
 
 const fellixFont = localFont({ 
@@ -18,6 +19,9 @@ export default function App() {
         <div className="pl-20 pt-28">
           <SearchCard/>
         </div>
+      </div>
+      <div className="px-20 py-20">
+        <SuggestionGroup />
       </div>
     </main>
   )

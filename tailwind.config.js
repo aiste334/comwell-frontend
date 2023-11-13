@@ -11,7 +11,8 @@ module.exports = {
         'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
         'gradient-conic':
           'conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))',
-        'hero': 'url(/images/hero.webp)'
+        'hero': 'url(/images/hero.webp)',
+        'narrowsuggestion': 'url(/images/narrow.webp)'
       },
       colors: {
         'active-gray': '#252C2F',

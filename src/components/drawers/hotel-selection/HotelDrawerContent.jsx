@@ -1,25 +1,18 @@
 import React, { useState } from 'react'
-import BackArrowSvg from "@/public/icons/backarrow.svg"
-import Image from "next/image"
 import hotelData from "@/public/dummy-backend/hotels.json"
 import HotelCard from './HotelCard'
-import TabGroup from '../ui/tabs/TabGroup'
-import Tab from '../ui/tabs/Tab'
-import PrimaryButton from '../ui/buttons/PrimaryButton'
+import TabGroup from '../../ui/tabs/TabGroup'
+import Tab from '../../ui/tabs/Tab'
+import PrimaryButton from '../../ui/buttons/PrimaryButton'
+import DrawerPrimaryButton from '../../ui/buttons/DrawerPrimaryButton'
 
 
-function HotelDrawerContent({ closeDrawer }) {
 
-    const [ selectedFilter, setSelectedFilter ] = useState('alle')
-    const [ selectedHotel, setSelectedHotel ] = useState()  
+function HotelDrawerContent({ selectedHotel, setSelectedHotel, onClose }) {
 
-    function closeHotelDrawer() {
-        closeDrawer(); // Close the drawer by calling the function from props
+    function handleCardClick(hotel) {
+        setSelectedHotel(hotel); // Set the selected hotel
     }
-
-    function handleCardClick(hotelName) {
-        console.log(`Card clicked: ${hotelName}`);
-      }
 
     const renderHotels = (area) => {
         const filteredHotels = area ? hotelData.filter(hotel => hotel.area === area) : hotelData
@@ -28,16 +21,16 @@ function HotelDrawerContent({ closeDrawer }) {
               key={hotel.name}
               name={hotel.name}
               city={hotel.city}
-              onButtonClick={() => handleCardClick(hotel.name)}
+              image={hotel.image}
+              isSelected={selectedHotel === hotel} // Pass isSelected prop
+              onButtonClick={() => handleCardClick(hotel)}
             />
           )})
     }
 
   return (
     <div className='flex flex-col h-full'>
-        <button onClick={closeHotelDrawer} className='p-2'><BackArrowSvg/></button>
         <h1 className="text-3xl font-semibold p-3">Hoteller</h1>
-
         <TabGroup className="flex-1">
             <Tab title="Alle" className="flex flex-col gap-3">
                 <hr className="h-px my-2 bg-gray-200 border-0 dark:bg-gray-700"></hr>
@@ -54,7 +47,7 @@ function HotelDrawerContent({ closeDrawer }) {
             </Tab>
         </TabGroup>
         <hr className="h-px my-2 bg-gray-200 border-0 dark:bg-gray-700 mt-auto"></hr>
-        <PrimaryButton>Choose</PrimaryButton>
+        <DrawerPrimaryButton disabled={!selectedHotel} className="pt-12" onClick={onClose}>Choose</DrawerPrimaryButton>
     </div>
     )
 }
