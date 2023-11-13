@@ -1,4 +1,3 @@
-import Image from 'next/image'
 import DropdownSvg from '@/public/icons/select-dropdown.svg'
 
 const Select = ({ onClick, title, children }) => {

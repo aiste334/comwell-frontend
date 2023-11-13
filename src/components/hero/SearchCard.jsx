@@ -44,7 +44,7 @@ const SearchCard = ({ className }) => {
           <Select title="Hotel" onClick={() => {setDrawer('hotel')}}>Select hotel</Select>
           <Select title="Rooms" onClick={() => {setDrawer('rooms')}}>{roomCount} Room, {guestCount} Person</Select>
           <DoubleSelect titles={["Check-in", "Check-out"]} values={[startDateString, endDateString]} onClick={() => {setDrawer('dates')}}/>
-          <PrimaryButton>
+          <PrimaryButton disabled={!rooms && !dates}>
             Search
             <SearchSvg className="w-4 h-4"/>
           </PrimaryButton>

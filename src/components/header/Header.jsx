@@ -9,20 +9,12 @@ import MenuIcon from "@/public/icons/menu.svg"
 import Drawer from 'react-modern-drawer'
 import 'react-modern-drawer/dist/index.css'
 import HotelDrawerContent from "../drawers/HotelDrawerContent"
+import LogInModal from "../modals/log-in-modal/LogInModal"
+import ShortSideDrawer from "../side-drawer/ShortSideDrawer"
 
 const Header = ({ }) => {
 
-    const [isDrawerOpen, setIsDrawerOpen] = useState(false);
-
-
-    function displayHotels(){
-        setIsDrawerOpen(true)
-    }
-
-
-    function closeDrawer() {
-        setIsDrawerOpen(false);
-    }
+    const [modal, setModal] = useState()
 
     return (
         <>
@@ -31,18 +23,18 @@ const Header = ({ }) => {
                     <LogoSvg/>
                 </Link>
                 <div className="flex gap-6">
-                    <HeaderButton onClick={displayHotels} >Lokationer <DropdownIcon/></HeaderButton>
-                    <HeaderButton onClick={() => {}} >Profil <ProfileIcon/></HeaderButton>
+                    <HeaderButton onClick={() => setModal('locations')} >Locations <DropdownIcon/></HeaderButton>
+                    <HeaderButton onClick={() => setModal('login')}>
+                        Profile <ProfileIcon/>
+                        <LogInModal isOpen={modal === 'login'} onClose={() => setModal()}/>
+                    </HeaderButton>
                     <HeaderButton onClick={() => {}} >Menu <MenuIcon/></HeaderButton>
                 </div>
             </div>
-            <Drawer
-            open={isDrawerOpen}
-            onClose={closeDrawer}
-            direction='right'
-            size='300px'>
-             <HotelDrawerContent closeDrawer={closeDrawer} />
-            </Drawer>
+
+            <ShortSideDrawer onClose={() => setModal()}>
+                <HotelDrawerContent closeDrawer={() => setModal()} />
+            </ShortSideDrawer>
         </>
     )
 }
