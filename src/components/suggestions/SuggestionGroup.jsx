@@ -3,15 +3,15 @@ import Suggestion from './Suggestion'
 
 function SuggestionGroup() {
   return (
-    <div className=' flex w-screen h-[400px] gap-5'>
+    <div className='flex w-full gap-5'>
         <Suggestion 
-          width='w-1/3'
+          width='grow-[1]'
           image='/images/narrow1.webp' 
           floaterText='Se lokaler og mødepakker' 
           titleText='Lad os hjælpe dig med dit næste møde' 
           subtitle='Vi har lokalerne, den gode forplejning og professionel mødeplanlægning.'/>
         <Suggestion 
-          width='w-7/12'
+          width='grow-[2]'
           image='/images/wide.jpg' 
           floaterText='Sæt kryds i kalenderen' 
           titleText='Julefest med mad og musik' 
