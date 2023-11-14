@@ -15,7 +15,7 @@ function OfferSection() {
   const [sliderRef, slider] = useKeenSlider(
     {
       slides: {
-        perView: 3,
+        perView: 3.5,
         spacing: 30,
         centered: true
       }

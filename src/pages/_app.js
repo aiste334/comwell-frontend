@@ -7,6 +7,7 @@ import SuggestionGroup from "../components/suggestions/SuggestionGroup"
 import localFont from 'next/font/local'
 import OfferSection from "../components/caroussel/OfferSection"
 import SidePadding from "../components/ui/side-padding/SidePadding"
+import Footer from "../components/footer/Footer"
 
 const fellixFont = localFont({ 
   variable: '--font-fellix',
@@ -28,6 +29,7 @@ export default function App() {
         </SidePadding>
         <OfferSection />
       </div>
+      <Footer></Footer>
     </main>
   )
 }
