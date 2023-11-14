@@ -5,6 +5,7 @@ import "@/src/styles/datepicker.css"
 import SearchCard from "../components/hero/SearchCard"
 import SuggestionGroup from "../components/suggestions/SuggestionGroup"
 import localFont from 'next/font/local'
+import Footer from "../components/footer/Footer"
 
 const fellixFont = localFont({ 
   variable: '--font-fellix',
@@ -23,6 +24,7 @@ export default function App() {
       <div className="px-20 py-20">
         <SuggestionGroup />
       </div>
+      <Footer></Footer>
     </main>
   )
 }

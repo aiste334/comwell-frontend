@@ -19,7 +19,9 @@ module.exports = {
         'cw-gray-600': '#000000A6',
         'cw-gray-300': '#E0E0E0',
         'cw-gray-200': '#E1E1E5',
-        'active-black': '#161D20'
+        'active-black': '#161D20',
+        "sea-100":"#182B39",
+        "sea-80" : "#273A48"
       },
       fontFamily: {
         fellix: ['var(--font-fellix)']
