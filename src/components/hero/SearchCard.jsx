@@ -18,6 +18,7 @@ import FormStepGroup from '../ui/form-steps/FormStepGroup'
 import FormStep from '../ui/form-steps/FormStep'
 import useFormSteps from '@/src/hooks/useFormSteps'
 import BookingFormSection from '../booking-steps/BookingFormSection'
+import GuestInfoContent from '../booking-steps/GuestInfoContent'
 
 
 const SearchCard = ({ className }) => {
@@ -93,7 +94,7 @@ const SearchCard = ({ className }) => {
           <PrimaryButton onClick={() => next()}>Next step</PrimaryButton>
         </FormStep>
         <FormStep>
-          <PrimaryButton onClick={() => prev()}>Previous step</PrimaryButton>
+          <GuestInfoContent></GuestInfoContent>
           <PrimaryButton onClick={() => next()}>Next step</PrimaryButton>
         </FormStep>
         <FormStep>

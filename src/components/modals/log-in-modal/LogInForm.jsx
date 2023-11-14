@@ -11,7 +11,6 @@ const LogInForm = () => {
 
   const [email, setEmail] = useState('')
   const [password, setPassword] = useState('')
-
   const [drawer, setDrawer] = useState()
 
   return (
