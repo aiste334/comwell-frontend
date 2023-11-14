@@ -6,14 +6,22 @@ import BustSvg from "@/public/icons/bust.svg"
 import RoomDrawerHeaderInfo from './RoomDrawerHeaderInfo'
 import LocationPointerSvg from "@/public/icons/locationpointer.svg"
 import BedSvg from "@/public/icons/bed.svg"
-import STitle from '../../ui/STitle'
+import STitle from '../../ui/text/STitle'
+import ShortSideDrawer from '../../side-drawer/ShortSideDrawer'
+import DateSelection from '../date-selection/DateSelection'
+import Overview from '../../overview/Overview'
 
 
-function RoomDrawerContent({ selectedHotel, roomCount, guestCount, startDateString, endDateString }) {
+function RoomBookigDrawerContent({ selectedHotel, roomCount, guestCount, startDateString, endDateString }) {
+
+  const [ isOverViewDisplayed, setIsOverViewDisplayed] = useState(false)
   const [selectedRoom, setSelectedRoom] = useState(null);
 
+  function closeOverviewDrawer(){
+    setIsOverViewDisplayed(false)
+  }
 
-  function handleSuiteCardClick(room) {
+  function onRoomCardClick(room) {
     setSelectedRoom(room);
   }
 
@@ -27,10 +35,14 @@ function RoomDrawerContent({ selectedHotel, roomCount, guestCount, startDateStri
             image={room.image}
             description={room.description}
             isSelected={selectedRoom === room}
-            onButtonClick={() => handleSuiteCardClick(room)}
+            onRoomCardClick={() => onRoomCardClick(room)}
         />
     ));
   };
+
+  function displayOverview(){
+    setIsOverViewDisplayed(true)
+  }
 
   return (
     <>
@@ -47,8 +59,8 @@ function RoomDrawerContent({ selectedHotel, roomCount, guestCount, startDateStri
           <RoomDrawerHeaderInfo
             text={selectedHotel.name}
             Icon={LocationPointerSvg}
-          />
-          <button className="ml-auto mr-[35px] flex items-center gap-x-2 transition-opacity" aria-label="Åben kurv">
+          /> 
+          <button className="ml-auto mr-[35px] flex items-center gap-x-2 transition-opacity" onClick={displayOverview}>
             <div className="flex flex-col justify-end gap-y-0.5">
               <span className="room-label ml-auto block w-max lowercase">1 Værelse</span>
               <div className="whitespace-nowrap price">
@@ -67,8 +79,12 @@ function RoomDrawerContent({ selectedHotel, roomCount, guestCount, startDateStri
           {renderRooms()}
         </div>
       </div>
+      
+      <ShortSideDrawer isOpen={isOverViewDisplayed} onClose={closeOverviewDrawer}>
+        <Overview selectedRoom={selectedRoom} clickEdit={closeOverviewDrawer}/>
+      </ShortSideDrawer>
     </>
   );
 }
 
-export default RoomDrawerContent;
+export default RoomBookigDrawerContent;
