@@ -3,7 +3,7 @@ import Suggestion from './Suggestion'
 
 function SuggestionGroup() {
   return (
-    <div className=' flex w-full h-[400px] gap-5'>
+    <div className=' flex w-screen h-[400px] gap-5'>
         <Suggestion 
           width='w-1/3'
           image='/images/narrow1.webp' 
@@ -11,7 +11,7 @@ function SuggestionGroup() {
           titleText='Lad os hjælpe dig med dit næste møde' 
           subtitle='Vi har lokalerne, den gode forplejning og professionel mødeplanlægning.'/>
         <Suggestion 
-          width='w-2/3'
+          width='w-7/12'
           image='/images/wide.jpg' 
           floaterText='Sæt kryds i kalenderen' 
           titleText='Julefest med mad og musik' 

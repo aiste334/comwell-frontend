@@ -5,6 +5,7 @@ import "@/src/styles/datepicker.css"
 import SearchCard from "../components/hero/SearchCard"
 import SuggestionGroup from "../components/suggestions/SuggestionGroup"
 import localFont from 'next/font/local'
+import OfferSection from "../components/caroussel/OfferSection"
 
 const fellixFont = localFont({ 
   variable: '--font-fellix',
@@ -20,8 +21,9 @@ export default function App() {
           <SearchCard/>
         </div>
       </div>
-      <div className="px-20 py-20">
+      <div className="w-screen px-20 py-20 grid gap-20">
         <SuggestionGroup />
+        <OfferSection />
       </div>
     </main>
   )
