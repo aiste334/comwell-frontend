@@ -22,8 +22,6 @@ function Suggestion({ image, floaterText, titleText, subtitle, width }) {
             height={1680}/>
         </div>
         <SmallFloater className={'uppercase'} text={floaterText} />
-
-        <div></div>
       </button>
     </div>
   )

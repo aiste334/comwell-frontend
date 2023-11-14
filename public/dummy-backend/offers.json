@@ -6,6 +6,57 @@
         "price": "1.972",
         "oldPrice": null,
         "rooms": 1,
+        "image": "/images/offerimages/spa1.webp",
+        "people": 1
+    },    
+    {
+        "tag": "Spa",
+        "title": "SøndagsSpa ophold",
+        "description": "Forlæng weekend følelsen med et SøndagsSpa ophold med bl.a. velkomstdrink, 3-retters middag, fri adgang til vores AquaSpa og morgenbuffet.",
+        "price": "1.587",
+        "oldPrice": "1.984",
+        "image": "/images/offerimages/spa2.webp",
+        "rooms": 1,
+        "people": 1
+    },
+    {
+        "tag": "Spa",
+        "title": "HverdagsSpa",
+        "description": "Tag en pause fra hverdagens stress og nyd lidt luksus og selvforkælelse på Comwell Borupgaard og Comwell Kellers Park. Spar 30% på udvalgte hverdage.",
+        "price": "1.389",
+        "oldPrice": "1.984",
+        "rooms": 1,
+        "image": "/images/offerimages/spa3.webp",
+        "people": 1
+    },
+    {
+        "tag": "Spa",
+        "title": "SpaRetreat",
+        "description": "Nyd et dejligt sparetreat på 3 dage, og tjek ind til afslapning og velvære. Spaopholdet byder bl.a. på middag begge aftener, morgenbuffet og fri adgang til vores AquaSpa.",
+        "price": "1.856",
+        "oldPrice": null,
+        "rooms": 1,
+        "image": "/images/offerimages/spa4.webp",
+        "people": 1
+    },
+    {
+        "tag": "GASTRONOMI",
+        "title": "Forkælelsesophold",
+        "description": "Træk stikket, pust ud. Og gå all in på forkælelse. Forkælelsesopholdet byder på kaffe og hjemmebag ved ankomst, velkomstbobler, 3-retters middag/buffet, og vores store morgenbuffet.",
+        "price": "1.098",
+        "oldPrice": null,
+        "rooms": 1,
+        "image": "/images/offerimages/gastr.webp",
+        "people": 1
+    },
+    {
+        "tag": "GASTRONOMI",
+        "title": "Ophold med 2-retters middag",
+        "description": "Nyd et dejligt ophold med middag af sæsonens friske råvarer på et af vores udvalgte hoteller. Dette ophold er inkl. 2-retters middag, overnatning og morgenmad.",
+        "price": "991",
+        "oldPrice": null,
+        "rooms": 1,
+        "image": "/images/offerimages/gastr1.webp",
         "people": 1
     }
 ]
