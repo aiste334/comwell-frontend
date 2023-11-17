@@ -13,7 +13,7 @@ const SideDrawer = ({ isOpen, onClose = () => {}, children, animationDuration = 
       setTranslateSnippet={setTranslateSnippet}
     >
       <div 
-        className={`fixed top-0 right-0 min-w-[360px] overflow-scroll bg-white h-full ml-auto px-4 pt-8 cursor-default transition-all duration-[${animationDuration}ms] ${translateSnippet} ${className}`} 
+        className={`fixed top-0 right-0 min-w-[360px] overflow-y-scroll bg-white h-full ml-auto px-4 pt-8 cursor-default transition-all duration-[${animationDuration}ms] ${translateSnippet} ${className}`} 
         onClick={(e) => {e.stopPropagation()}}>
           {children}
       </div>

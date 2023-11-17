@@ -8,31 +8,22 @@ import LocationPointerSvg from "@/public/icons/locationpointer.svg"
 import BedSvg from "@/public/icons/bed.svg"
 import STitle from '../../ui/text/STitle'
 import ShortSideDrawer from '../../side-drawer/ShortSideDrawer'
-import DateSelection from '../date-selection/DateSelection'
 import Overview from '../../overview/Overview'
+import BackArrowButton from '../../ui/buttons/circle-buttons/BackArrowButton'
 
 
-function RoomBookigDrawerContent({ selectedHotel, roomCount, guestCount, startDateString, endDateString }) {
+function RoomBookingDrawerContent({ selectedHotel, selectedRoom, roomCount, guestCount, startDateString, endDateString, onRoomCardClick, closeDrawer }) {
 
   const [ isOverViewDisplayed, setIsOverViewDisplayed] = useState(false)
-  const [selectedRoom, setSelectedRoom] = useState(null);
 
   function closeOverviewDrawer(){
     setIsOverViewDisplayed(false)
   }
 
-  function onRoomCardClick(room) {
-    setSelectedRoom(room);
-  }
-
   const renderRooms = () => {
     return selectedHotel?.rooms.map(room => (
         <RoomCard
-            key={room.type}
-            type={room.type}
-            size={room.size}
-            price={room.price}
-            image={room.image}
+            room={room}
             description={room.description}
             isSelected={selectedRoom === room}
             onRoomCardClick={() => onRoomCardClick(room)}
@@ -47,6 +38,7 @@ function RoomBookigDrawerContent({ selectedHotel, roomCount, guestCount, startDa
   return (
     <>
       <div className="flex flex-col gap-6 pl-[55px] pt-10 w-full h-full">
+        <BackArrowButton className="absolute top-4 left-5" onClick={closeDrawer}/>
         <div className='fixed top-0 left-[70px] items-center w-11/12 h-[68px] flex text-xs'>
           <RoomDrawerHeaderInfo 
             text={`${startDateString} - ${endDateString}`}
@@ -75,9 +67,12 @@ function RoomBookigDrawerContent({ selectedHotel, roomCount, guestCount, startDa
           </button>
         </div>
         <Heading>Vælg værelse</Heading>
-        <div className='flex flex-col gap-6'>
-          {renderRooms()}
+        <div className='overflow-y-scroll'>
+          <div className='flex flex-col gap-6 pb-5'>
+            {renderRooms()}
+          </div>
         </div>
+
       </div>
       
       <ShortSideDrawer isOpen={isOverViewDisplayed} onClose={closeOverviewDrawer}>
@@ -87,4 +82,4 @@ function RoomBookigDrawerContent({ selectedHotel, roomCount, guestCount, startDa
   );
 }
 
-export default RoomBookigDrawerContent;
+export default RoomBookingDrawerContent;

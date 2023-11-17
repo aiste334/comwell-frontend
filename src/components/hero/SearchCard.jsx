@@ -11,14 +11,9 @@ import OccupancySelection from '../drawers/occupancy-selection/OccupancySelectio
 import { getTodayDate, getTomorrowDate, formatToMonthDay } from '@/src/utils/dates'
 import ShortSideDrawer from '../side-drawer/ShortSideDrawer'
 import DateSelection from '../drawers/date-selection/DateSelection'
-import RoomBookigDrawerContent from '../drawers/room-selection/RoomBookingDrawerContent'
-import BackArrowButton from '../ui/buttons/circle-buttons/BackArrowButton'
 import SideDrawer from '../side-drawer/SideDrawer'
-import FormStepGroup from '../ui/form-steps/FormStepGroup'
-import FormStep from '../ui/form-steps/FormStep'
 import useFormSteps from '@/src/hooks/useFormSteps'
 import BookingFormSection from '../booking-steps/BookingFormSection'
-import GuestInfoContent from '../booking-steps/GuestInfoContent'
 
 
 const SearchCard = ({ className }) => {
@@ -37,6 +32,13 @@ const SearchCard = ({ className }) => {
   const [drawer, setDrawer] = useState()
   const closeDrawer = () => setDrawer()
 
+  function closeBookingDrawer(){
+    reset();
+    closeDrawer();
+    setSelectedRoom(null);
+  }
+
+
   const [rooms, setRooms] = useState([INITIAL_ROOM])
   const roomCount = rooms.length
   const guestCount = rooms.reduce((prev, curr) => prev += curr.adults + curr.children + curr.toddlers, 0)
@@ -48,9 +50,13 @@ const SearchCard = ({ className }) => {
   const [selectedHotel, setSelectedHotel] = useState(null);
   const hotelString = selectedHotel ? selectedHotel.name : 'Select hotel'
 
+  const [selectedRoom, setSelectedRoom] = useState(null);
+  const onRoomCardClick = (room) => {
+    setSelectedRoom(room);
+    next();
+  };
 
-
-  const { currentStep, next, prev, reset } = useFormSteps(3)
+  const { currentStep, next, prev, reset } = useFormSteps(4)
 
 
   return (
@@ -85,24 +91,9 @@ const SearchCard = ({ className }) => {
     <ShortSideDrawer isOpen={drawer === 'dates'} onClose={closeDrawer}>
       <DateSelection dates={dates} setDates={setDates} onClose={closeDrawer}/>
     </ShortSideDrawer>
-    <SideDrawer isOpen={drawer === 'suites'} onClose={closeDrawer} className="w-[900px]">
-      <BackArrowButton className="absolute top-4 left-5" onClick={closeDrawer}/>
-      {/* <RoomDrawerContent selectedHotel={selectedHotel} roomCount={roomCount} guestCount={guestCount} startDateString={startDateString} endDateString={endDateString}/> */}       
-       <FormStepGroup currentStep={currentStep}>
-        <FormStep>
-          <RoomBookigDrawerContent selectedHotel={selectedHotel} roomCount={roomCount} guestCount={guestCount} startDateString={startDateString} endDateString={endDateString}/>
-          <PrimaryButton onClick={() => next()}>Next step</PrimaryButton>
-        </FormStep>
-        <FormStep>
-          <GuestInfoContent></GuestInfoContent>
-          <PrimaryButton onClick={() => next()}>Next step</PrimaryButton>
-        </FormStep>
-        <FormStep>
-          <h1>last step</h1>
-          <PrimaryButton onClick={() => prev()}>Previous step</PrimaryButton>
-        </FormStep>
-      </FormStepGroup>
 
+    <SideDrawer isOpen={drawer === 'suites'} onClose={closeBookingDrawer} className="w-[900px]">
+      <BookingFormSection closeDrawer={closeDrawer} closeBookingDrawer={closeBookingDrawer} selectedHotel={selectedHotel} selectedRoom={selectedRoom} roomCount={roomCount} guestCount={guestCount} startDateString={startDateString} endDateString={endDateString} onRoomCardClick={onRoomCardClick} currentStep={currentStep} next={next} prev={prev} reset={reset}></BookingFormSection>
     </SideDrawer>
     </>
   )
