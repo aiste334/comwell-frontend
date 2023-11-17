@@ -4,9 +4,13 @@ import CheckMarkSvg from '@/public/icons/action-circles/checkmark.svg'
 import CalendarSvg from "@/public/icons/calendar.svg"
 import BustSvg from "@/public/icons/bust.svg"
 import LocationPointerSvg from "@/public/icons/locationpointer.svg"
+import useBookingInfoFormatting from '@/src/hooks/useBookingInfoFormatting'
 
 
-function ConfirmationSection({startDateString, endDateString, roomCount, guestCount, selectedHotel}) {
+function ConfirmationSection({rooms, dates, selectedHotel}) {
+
+  const { startDateString, endDateString, roomCount, guestCount } = useBookingInfoFormatting({ rooms, dates })
+
   return (
     <div>
         <div className='flex flex-col gap-3'>
@@ -22,8 +26,8 @@ function ConfirmationSection({startDateString, endDateString, roomCount, guestCo
             </div>
             <div className='flex flex-col'>
                 <span className='px-4 gap-2 flex items-center'>
-                    <CalendarSvg className='h-[15px] w-[15px]'/>
-                    {`${startDateString} - ${endDateString}`}
+                    <CalendarSvg className='h-[15px] w-[15px]'/> 
+                    {`${startDateString || '?'} - ${endDateString || '?'}`}
                 </span>
                 <span className='px-4 gap-2 flex items-center'>
                     <BustSvg className='h-[15px] w-[15px]'/>

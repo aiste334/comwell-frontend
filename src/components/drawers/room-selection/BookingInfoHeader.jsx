@@ -3,16 +3,17 @@ import CalendarSvg from "@/public/icons/calendar.svg"
 import BustSvg from "@/public/icons/bust.svg"
 import LocationPointerSvg from "@/public/icons/locationpointer.svg"
 import RoomDrawerHeaderInfo from './RoomDrawerHeaderInfo'
+import useBookingInfoFormatting from '@/src/hooks/useBookingInfoFormatting'
 
-function BookingInfoHeader({ startDateString, endDateString, roomCount, guestCount, selectedHotel, isHeaderHidden }) {
+function BookingInfoHeader({ dates, rooms, selectedHotel, className }) {
 
-  const isHeaderHiddenClassName = isHeaderHidden ? 'invisible': 'visible'
+  const { startDateString, endDateString, roomCount, guestCount } = useBookingInfoFormatting({ rooms, dates })
 
   return (
     <>
-      <div className={`fixed top-0 items-center h-[68px] flex text-xs ${isHeaderHiddenClassName}`}>
+      <div className={`fixed top-0 items-center h-[68px] flex text-xs ${className}`}>
         <RoomDrawerHeaderInfo 
-            text={`${startDateString} - ${endDateString}`}
+            text={`${startDateString || '?'} - ${endDateString || '?'}`}
             Icon={CalendarSvg}
           />
           <RoomDrawerHeaderInfo
@@ -20,7 +21,7 @@ function BookingInfoHeader({ startDateString, endDateString, roomCount, guestCou
             Icon={BustSvg}
           />
           <RoomDrawerHeaderInfo
-            text={selectedHotel?.name}
+            text={selectedHotel?.name || '?'}
             Icon={LocationPointerSvg}
           /> 
         </div>

@@ -10,13 +10,13 @@ import PrimaryButton from '../ui/buttons/PrimaryButton'
 import OverviewRoom from '../overview/OverviewRoom'
 import OverviewBookingComponent from '../overview/OverviewBookingComponent'
 
-function GuestInfoContent({ fuldenavn, setFuldeNavn, email, setEmail, phoneNumber, setPhoneNumber }) {
+function GuestInfoContent({ fullName, setFullName, email, setEmail, phoneNumber, setPhoneNumber }) {
 
   return (
         <>
             <Title>Gæsteinformation</Title>
             <div className='flex flex-col gap-2 pr-5 pb-10 mb-10 border-b-[1px]'>
-                <Input label="Fulde navn" value={fuldenavn} onChange={(e) => setFuldeNavn(e.target.value)}/>
+                <Input label="Fulde navn" value={fullName} onChange={(e) => setFullName(e.target.value)}/>
                 <Input label="Email" value={email} onChange={(e) => setEmail(e.target.value)}/>
                 <Input label="Telefon" type='number' value={phoneNumber} placeholder='+45' onChange={(e) => setPhoneNumber(e.target.value)}/>
                 <Input label="Tilføj adresse nu og spar tid ved check-in." />

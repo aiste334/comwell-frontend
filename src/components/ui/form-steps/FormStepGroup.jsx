@@ -1,8 +1,8 @@
-const FormStepGroup = ({ currentStep = 1, className, children }) => {
+const FormStepGroup = ({ currentStep = 1, children }) => {
   return (
-    <div className={`flex flex-col ${className}`}>
+    <>
       {children[currentStep-1] || ''}
-    </div>
+    </>
   )
 }
 

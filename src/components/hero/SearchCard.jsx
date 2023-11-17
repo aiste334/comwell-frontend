@@ -14,6 +14,7 @@ import DateSelection from '../drawers/date-selection/DateSelection'
 import SideDrawer from '../side-drawer/SideDrawer'
 import useFormSteps from '@/src/hooks/useFormSteps'
 import BookingFormSection from '../booking-steps/BookingFormSection'
+import useBookingInfoFormatting from '@/src/hooks/useBookingInfoFormatting'
 
 
 const SearchCard = ({ className }) => {
@@ -33,31 +34,28 @@ const SearchCard = ({ className }) => {
   const closeDrawer = () => setDrawer()
 
   function closeBookingDrawer(){
-    reset();
+    formSteps.reset();
     closeDrawer();
     setSelectedRoom(null);
   }
 
 
   const [rooms, setRooms] = useState([INITIAL_ROOM])
-  const roomCount = rooms.length
-  const guestCount = rooms.reduce((prev, curr) => prev += curr.adults + curr.children + curr.toddlers, 0)
 
   const [dates, setDates] = useState(INITIAL_DATES)
-  const startDateString = dates?.start ? formatToMonthDay(dates.start) : 'Select date'
-  const endDateString = dates?.end ? formatToMonthDay(dates.end) : 'Select date'
+
+  const { startDateString, endDateString, roomCount, guestCount } = useBookingInfoFormatting({ rooms, dates })
 
   const [selectedHotel, setSelectedHotel] = useState(null);
   const hotelString = selectedHotel ? selectedHotel.name : 'Select hotel'
 
+  const formSteps = useFormSteps(4)
+
   const [selectedRoom, setSelectedRoom] = useState(null);
   const onRoomCardClick = (room) => {
     setSelectedRoom(room);
-    next();
+    formSteps.next();
   };
-
-  const { currentStep, next, prev, reset } = useFormSteps(4)
-
 
   return (
     <>
@@ -67,7 +65,11 @@ const SearchCard = ({ className }) => {
         <Tab title="Overnatning" className="flex flex-col gap-3">
           <Select title="Hotel" onClick={() => {setDrawer('hotel')}}>{hotelString}</Select>
           <Select title="Rooms" onClick={() => {setDrawer('rooms')}}>{roomCount} Room, {guestCount} Person</Select>
-          <DoubleSelect titles={["Check-in", "Check-out"]} values={[startDateString, endDateString]} onClick={() => {setDrawer('dates')}}/>
+          <DoubleSelect 
+            titles={["Check-in", "Check-out"]} 
+            values={[startDateString || 'Select date', endDateString || 'Select date']} 
+            onClick={() => {setDrawer('dates')}}
+          />
           <PrimaryButton disabled={!rooms && !dates} onClick={() => {selectedHotel? setDrawer('suites') : null}}>
             Search
             <SearchSvg className="w-4 h-4"/>
@@ -93,7 +95,16 @@ const SearchCard = ({ className }) => {
     </ShortSideDrawer>
 
     <SideDrawer isOpen={drawer === 'suites'} onClose={closeBookingDrawer} className="w-[900px]">
-      <BookingFormSection closeDrawer={closeDrawer} closeBookingDrawer={closeBookingDrawer} selectedHotel={selectedHotel} selectedRoom={selectedRoom} roomCount={roomCount} guestCount={guestCount} startDateString={startDateString} endDateString={endDateString} onRoomCardClick={onRoomCardClick} currentStep={currentStep} next={next} prev={prev} reset={reset}></BookingFormSection>
+      <BookingFormSection 
+        closeDrawer={closeDrawer} 
+        closeBookingDrawer={closeBookingDrawer} 
+        selectedHotel={selectedHotel} 
+        selectedRoom={selectedRoom} 
+        rooms={rooms}
+        dates={dates}
+        onRoomCardClick={onRoomCardClick} 
+        formSteps={formSteps}
+      />
     </SideDrawer>
     </>
   )

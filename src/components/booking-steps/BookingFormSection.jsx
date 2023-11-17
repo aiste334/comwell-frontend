@@ -7,111 +7,88 @@ import BackArrowButton from '../ui/buttons/circle-buttons/BackArrowButton';
 import ConfirmationSection from './ConfirmationSection';
 import GuestInfoContent from './GuestInfoContent';
 import PaymentInfoContent from './PaymentInfoContent';
+import BookingInfoHeader from '@/src/components/drawers/room-selection/BookingInfoHeader';
 
 function BookingFormSection({
   selectedRoom,
   selectedHotel,
-  roomCount,
-  guestCount,
-  startDateString,
-  endDateString,
+  rooms,
+  dates,
   onRoomCardClick,
-  currentStep,
-  next,
-  prev,
+  formSteps,
   closeBookingDrawer,
   closeDrawer
 }) {
-  const [fuldenavn, setFuldeNavn] = useState('');
+  const [fullName, setFullName] = useState('');
   const [email, setEmail] = useState('');
   const [phoneNumber, setPhoneNumber] = useState('');
-  const [kommentar, setKommentar] = useState('');
+  const [comment, setComment] = useState('');
   const [isPaymentMethodSelected, setIsPaymentMethodSelected] = useState(false);
 
-  const commonBackButtonProps = { className: 'absolute top-4 left-5', onClick: prev };
+  const { currentStep, next, prev, reset } = formSteps
+
+  const infoHeader = (
+    <BookingInfoHeader rooms={rooms} dates={dates} selectedHotel={selectedHotel}/>    
+  )
 
   return (
     <FormStepGroup currentStep={currentStep}>
-      <FormStep>
-        <RoomBookingDrawerContent
-          closeDrawer={closeDrawer}
-          selectedHotel={selectedHotel}
-          selectedRoom={selectedRoom}
-          roomCount={roomCount}
-          guestCount={guestCount}
-          startDateString={startDateString}
-          endDateString={endDateString}
-          onRoomCardClick={onRoomCardClick}
-        />
+      <FormStep onReturn={() => { closeDrawer(); reset() }}>
+        <BookingStepLayout infoHeader={infoHeader} >
+          <RoomBookingDrawerContent
+            selectedHotel={selectedHotel}
+            selectedRoom={selectedRoom}
+            onRoomCardClick={onRoomCardClick}
+          />
+        </BookingStepLayout>
       </FormStep>
-      <FormStep>
-        <BackArrowButton {...commonBackButtonProps} />
+      <FormStep onReturn={prev}>
         <BookingStepLayout
           bottomButtonText='Continue'
           clickNext={next}
-          selectedHotel={selectedHotel}
           selectedRoom={selectedRoom}
-          roomCount={roomCount}
-          guestCount={guestCount}
-          startDateString={startDateString}
-          endDateString={endDateString}
-          isHeaderHidden={false}
+          infoHeader={infoHeader}
         >
           <GuestInfoContent
             email={email}
-            fuldenavn={fuldenavn}
+            fullName={fullName}
             phoneNumber={phoneNumber}
             setEmail={setEmail}
-            setFuldeNavn={setFuldeNavn}
+            setFullName={setFullName}
             setPhoneNumber={setPhoneNumber}
           />
         </BookingStepLayout>
       </FormStep>
-      <FormStep>
-        <BackArrowButton {...commonBackButtonProps} />
+      <FormStep onReturn={prev}>
         <BookingStepLayout
           bottomButtonText='Book nu'
           clickNext={next}
-          selectedHotel={selectedHotel}
           selectedRoom={selectedRoom}
-          roomCount={roomCount}
-          guestCount={guestCount}
-          startDateString={startDateString}
-          endDateString={endDateString}
           disabled={!isPaymentMethodSelected}
-          isHeaderHidden={false}
+          infoHeader={infoHeader}
         >
           <PaymentInfoContent
             selectedHotel={selectedHotel}
-            startDateString={startDateString}
-            endDateString={endDateString}
-            kommentar={kommentar}
-            setKommentar={setKommentar}
-            fuldenavn={fuldenavn}
+            dates={dates}
+            comment={comment}
+            setComment={setComment}
+            fullName={fullName}
             isPaymentMethodSelected={isPaymentMethodSelected}
             setIsPaymentMethodSelected={setIsPaymentMethodSelected}
           />
         </BookingStepLayout>
       </FormStep>
-      <FormStep>
+      <FormStep onReturn={prev}>
         <BookingStepLayout
           bottomButtonText='Gå til forside'
           clickNext={closeBookingDrawer}
-          selectedHotel={selectedHotel}
           selectedRoom={selectedRoom}
-          roomCount={roomCount}
-          guestCount={guestCount}
-          startDateString={startDateString}
-          endDateString={endDateString}
-          isHeaderHidden={true}
         >
           <ConfirmationSection
             selectedHotel={selectedHotel}
             selectedRoom={selectedRoom}
-            roomCount={roomCount}
-            guestCount={guestCount}
-            startDateString={startDateString}
-            endDateString={endDateString}
+            rooms={rooms}
+            dates={dates}
           />
         </BookingStepLayout>
       </FormStep>

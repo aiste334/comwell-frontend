@@ -6,29 +6,31 @@ import CalendarSvg from '@/public/icons/calendar.svg';
 import BustSvg from '@/public/icons/bust.svg';
 import Title from '../ui/text/Title';
 import CheckMarkSvg from '@/public/icons/action-circles/checkmark.svg';
+import useBookingInfoFormatting from '@/src/hooks/useBookingInfoFormatting';
 
 function PaymentInfoContent({
-  kommentar,
-  setKommentar,
+  comment,
+  setComment,
   selectedHotel,
-  fuldenavn,
-  startDateString,
-  endDateString,
+  fullName,
+  dates,
   isPaymentMethodSelected,
   setIsPaymentMethodSelected,
 }) {
   const svgClassName = isPaymentMethodSelected ? 'visible' : 'invisible';
 
+  const { startDateString, endDateString } = useBookingInfoFormatting({ dates })
+
   return (
-    <>
+    <div className='pr-3'>
       <Title>Min booking</Title>
       <MiniOverviewCard title={selectedHotel.name} subtitle='Denmark' Icon={BuildingSvg} />
-      <MiniOverviewCard title='Gæsteinfo' subtitle={fuldenavn} Icon={BustSvg} />
-      <MiniOverviewCard title='Dato' subtitle={`${startDateString}-${endDateString}`} Icon={CalendarSvg} />
+      <MiniOverviewCard title='Gæsteinfo' subtitle={fullName} Icon={BustSvg} />
+      <MiniOverviewCard title='Dato' subtitle={`${startDateString || '?'} - ${endDateString || '?'}`} Icon={CalendarSvg} />
 
       <div className='flex flex-col py-3 gap-y-2'>
-        <Title>Evt. kommentar</Title>
-        <Input label='Evt. kommentar...' value={kommentar} onChange={(e) => setKommentar(e.target.value)} />
+        <Title>Evt. comment</Title>
+        <Input label='Evt. comment...' value={comment} onChange={(e) => setComment(e.target.value)} />
       </div>
 
       <div className='flex flex-col py-3 gap-y-2'>
@@ -53,7 +55,7 @@ function PaymentInfoContent({
           </div>
         </button>
       </div>
-    </>
+    </div>
   );
 }
 
