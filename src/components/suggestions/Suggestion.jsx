@@ -1,7 +1,7 @@
 import React from 'react'
 import SmallFloater from '../ui/SmallFloater'
 import Image from "next/image"
-import STitle from '../ui/STitle'
+import STitle from '../ui/text/STitle'
 
 
 function Suggestion({ image, floaterText, titleText, subtitle, width }) {
