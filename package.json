@@ -12,6 +12,7 @@
     "next": "14.0.0",
     "react": "^18",
     "react-dom": "^18",
+    "react-form-hook": "^0.0.1",
     "react-modern-drawer": "^1.2.2"
   },
   "devDependencies": {

@@ -14,7 +14,7 @@ const fellixFont = localFont({
 
 export default function App() {
   return (
-    <main className={`relative overflow-y-auto max-h-screen ${fellixFont.className}`} id="root-main">
+    <main className={`relative ${fellixFont.className}`} id="root-main">
       <Header />
       <div className="w-full bg-hero bg-cover h-screen" alt="hero">
         <div className="pl-20 pt-28">
