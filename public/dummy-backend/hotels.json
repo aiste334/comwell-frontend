@@ -8,21 +8,43 @@
             "type":"Standard double room",
             "size":"16",
             "price": "1500",
-            "image": "/images/hotelimages/borup.svg",
+            "image": "/images/roomimages/room2.webp",
             "description": "Vores standard har to senge, der er skubbet sammen. Her er to badeværelser. Et med bruser og toilet og et med badekar. På værelset finder du fladskærms-tv, telefon, skrivebord, sofa og lænestol. Der er strygejern og -bræt samt deponeringsboks i garderoben. Superior-værelserne er beliggende på 2.-8. sal. Evt. 3 & 4 gæst er opredninger"
         },
         {
             "type":"Standard twin room",
             "size":"20",
             "price": "1200",
-            "image": "/images/hotelimages/borup.svg",
+            "image": "/images/roomimages/room3.webp",
             "description": "Vores twin har to senge, der er skubbet sammen. Her er to badeværelser. Et med bruser og toilet og et med badekar. På værelset finder du fladskærms-tv, telefon, skrivebord, sofa og lænestol. Der er strygejern og -bræt samt deponeringsboks i garderoben. Superior-værelserne er beliggende på 2.-8. sal. Evt. 3 & 4 gæst er opredninger"
         },
         {
             "type":"Suite",
             "size":"30",
             "price": "2000",
-            "image": "/images/hotelimages/borup.svg",
+            "image": "/images/roomimages/room4.webp",
+            "description": "Vores standard har to senge, der er skubbet sammen. Her er to badeværelser. Et med bruser og toilet og et med badekar. På værelset finder du fladskærms-tv, telefon, skrivebord, sofa og lænestol. Der er strygejern og -bræt samt deponeringsboks i garderoben. Superior-værelserne er beliggende på 2.-8. sal. Evt. 3 & 4 gæst er opredninger"
+
+        },
+        {
+            "type":"Big room",
+            "size":"26",
+            "price": "2500",
+            "image": "/images/roomimages/room1.webp",
+            "description": "Vores room har to senge, der er skubbet sammen. Her er to badeværelser. Et med bruser og toilet og et med badekar. På værelset finder du fladskærms-tv, telefon, skrivebord, sofa og lænestol. Der er strygejern og -bræt samt deponeringsboks i garderoben. Superior-værelserne er beliggende på 2.-8. sal. Evt. 3 & 4 gæst er opredninger"
+        },
+        {
+            "type":"Standard triplet room",
+            "size":"20",
+            "price": "1200",
+            "image": "/images/roomimages/room5.webp",
+            "description": "Vores twin har to senge, der er skubbet sammen. Her er to badeværelser. Et med bruser og toilet og et med badekar. På værelset finder du fladskærms-tv, telefon, skrivebord, sofa og lænestol. Der er strygejern og -bræt samt deponeringsboks i garderoben. Superior-værelserne er beliggende på 2.-8. sal. Evt. 3 & 4 gæst er opredninger"
+        },
+        {
+            "type":"Suite",
+            "size":"50",
+            "price": "2500",
+            "image": "/images/roomimages/room6.webp",
             "description": "Vores standard har to senge, der er skubbet sammen. Her er to badeværelser. Et med bruser og toilet og et med badekar. På værelset finder du fladskærms-tv, telefon, skrivebord, sofa og lænestol. Der er strygejern og -bræt samt deponeringsboks i garderoben. Superior-værelserne er beliggende på 2.-8. sal. Evt. 3 & 4 gæst er opredninger"
 
         }]
@@ -34,33 +56,762 @@
         "area": "Fyn",
         "image": "/images/hotelimages/middelfart.svg",
         "rooms" : [{
-            "type":"Standard room",
-            "size":"20",
-            "price": "1000",
-            "image": "/images/hotelimages/borup.svg",
-            "description": "Vores standart har to senge, der er skubbet sammen. Her er to badeværelser. Et med bruser og toilet og et med badekar. På værelset finder du fladskærms-tv, telefon, skrivebord, sofa og lænestol. Der er strygejern og -bræt samt deponeringsboks i garderoben. Superior-værelserne er beliggende på 2.-8. sal. Evt. 3 & 4 gæst er opredninger"
+            "type":"Standard double room",
+            "size":"16",
+            "price": "1500",
+            "image": "/images/roomimages/room2.webp",
+            "description": "Vores standard har to senge, der er skubbet sammen. Her er to badeværelser. Et med bruser og toilet og et med badekar. På værelset finder du fladskærms-tv, telefon, skrivebord, sofa og lænestol. Der er strygejern og -bræt samt deponeringsboks i garderoben. Superior-værelserne er beliggende på 2.-8. sal. Evt. 3 & 4 gæst er opredninger"
         },
         {
-            "type":"Standard plus room",
-            "size":"25",
+            "type":"Standard twin room",
+            "size":"20",
             "price": "1200",
-            "image": "/images/hotelimages/borup.svg",
-            "description": "Vores standart plus har to senge, der er skubbet sammen. Her er to badeværelser. Et med bruser og toilet og et med badekar. På værelset finder du fladskærms-tv, telefon, skrivebord, sofa og lænestol. Der er strygejern og -bræt samt deponeringsboks i garderoben. Superior-værelserne er beliggende på 2.-8. sal. Evt. 3 & 4 gæst er opredninger"
+            "image": "/images/roomimages/room3.webp",
+            "description": "Vores twin har to senge, der er skubbet sammen. Her er to badeværelser. Et med bruser og toilet og et med badekar. På værelset finder du fladskærms-tv, telefon, skrivebord, sofa og lænestol. Der er strygejern og -bræt samt deponeringsboks i garderoben. Superior-værelserne er beliggende på 2.-8. sal. Evt. 3 & 4 gæst er opredninger"
         },
         {
             "type":"Suite",
             "size":"30",
             "price": "2000",
-            "image": "/images/hotelimages/borup.svg",
-            "description": "Vores suite har to senge, der er skubbet sammen. Her er to badeværelser. Et med bruser og toilet og et med badekar. På værelset finder du fladskærms-tv, telefon, skrivebord, sofa og lænestol. Der er strygejern og -bræt samt deponeringsboks i garderoben. Superior-værelserne er beliggende på 2.-8. sal. Evt. 3 & 4 gæst er opredninger"
+            "image": "/images/roomimages/room4.webp",
+            "description": "Vores standard har to senge, der er skubbet sammen. Her er to badeværelser. Et med bruser og toilet og et med badekar. På værelset finder du fladskærms-tv, telefon, skrivebord, sofa og lænestol. Der er strygejern og -bræt samt deponeringsboks i garderoben. Superior-værelserne er beliggende på 2.-8. sal. Evt. 3 & 4 gæst er opredninger"
+
         },
         {
-            "type":"Room",
-            "size":"10",
-            "price": "1000",
-            "image": "/images/hotelimages/borup.svg",
+            "type":"Big room",
+            "size":"26",
+            "price": "2500",
+            "image": "/images/roomimages/room1.webp",
             "description": "Vores room har to senge, der er skubbet sammen. Her er to badeværelser. Et med bruser og toilet og et med badekar. På værelset finder du fladskærms-tv, telefon, skrivebord, sofa og lænestol. Der er strygejern og -bræt samt deponeringsboks i garderoben. Superior-værelserne er beliggende på 2.-8. sal. Evt. 3 & 4 gæst er opredninger"
+        },
+        {
+            "type":"Standard triplet room",
+            "size":"20",
+            "price": "1200",
+            "image": "/images/roomimages/room5.webp",
+            "description": "Vores twin har to senge, der er skubbet sammen. Her er to badeværelser. Et med bruser og toilet og et med badekar. På værelset finder du fladskærms-tv, telefon, skrivebord, sofa og lænestol. Der er strygejern og -bræt samt deponeringsboks i garderoben. Superior-værelserne er beliggende på 2.-8. sal. Evt. 3 & 4 gæst er opredninger"
+        },
+        {
+            "type":"Suite",
+            "size":"50",
+            "price": "2500",
+            "image": "/images/roomimages/room6.webp",
+            "description": "Vores standard har to senge, der er skubbet sammen. Her er to badeværelser. Et med bruser og toilet og et med badekar. På værelset finder du fladskærms-tv, telefon, skrivebord, sofa og lænestol. Der er strygejern og -bræt samt deponeringsboks i garderoben. Superior-værelserne er beliggende på 2.-8. sal. Evt. 3 & 4 gæst er opredninger"
+
         }]
 
+    },
+    {
+        "name": "Copenhagen Portside",
+        "city": "Nordhavn",
+        "area": "Sjælland",
+        "image": "/images/hotelimages/copenhagenportside.webp",
+        "rooms" : [{
+            "type":"Standard double room",
+            "size":"16",
+            "price": "1500",
+            "image": "/images/roomimages/room2.webp",
+            "description": "Vores standard har to senge, der er skubbet sammen. Her er to badeværelser. Et med bruser og toilet og et med badekar. På værelset finder du fladskærms-tv, telefon, skrivebord, sofa og lænestol. Der er strygejern og -bræt samt deponeringsboks i garderoben. Superior-værelserne er beliggende på 2.-8. sal. Evt. 3 & 4 gæst er opredninger"
+        },
+        {
+            "type":"Standard twin room",
+            "size":"20",
+            "price": "1200",
+            "image": "/images/roomimages/room3.webp",
+            "description": "Vores twin har to senge, der er skubbet sammen. Her er to badeværelser. Et med bruser og toilet og et med badekar. På værelset finder du fladskærms-tv, telefon, skrivebord, sofa og lænestol. Der er strygejern og -bræt samt deponeringsboks i garderoben. Superior-værelserne er beliggende på 2.-8. sal. Evt. 3 & 4 gæst er opredninger"
+        },
+        {
+            "type":"Suite",
+            "size":"30",
+            "price": "2000",
+            "image": "/images/roomimages/room4.webp",
+            "description": "Vores standard har to senge, der er skubbet sammen. Her er to badeværelser. Et med bruser og toilet og et med badekar. På værelset finder du fladskærms-tv, telefon, skrivebord, sofa og lænestol. Der er strygejern og -bræt samt deponeringsboks i garderoben. Superior-værelserne er beliggende på 2.-8. sal. Evt. 3 & 4 gæst er opredninger"
+
+        },
+        {
+            "type":"Big room",
+            "size":"26",
+            "price": "2500",
+            "image": "/images/roomimages/room1.webp",
+            "description": "Vores room har to senge, der er skubbet sammen. Her er to badeværelser. Et med bruser og toilet og et med badekar. På værelset finder du fladskærms-tv, telefon, skrivebord, sofa og lænestol. Der er strygejern og -bræt samt deponeringsboks i garderoben. Superior-værelserne er beliggende på 2.-8. sal. Evt. 3 & 4 gæst er opredninger"
+        },
+        {
+            "type":"Standard triplet room",
+            "size":"20",
+            "price": "1200",
+            "image": "/images/roomimages/room5.webp",
+            "description": "Vores twin har to senge, der er skubbet sammen. Her er to badeværelser. Et med bruser og toilet og et med badekar. På værelset finder du fladskærms-tv, telefon, skrivebord, sofa og lænestol. Der er strygejern og -bræt samt deponeringsboks i garderoben. Superior-værelserne er beliggende på 2.-8. sal. Evt. 3 & 4 gæst er opredninger"
+        },
+        {
+            "type":"Suite",
+            "size":"50",
+            "price": "2500",
+            "image": "/images/roomimages/room6.webp",
+            "description": "Vores standard har to senge, der er skubbet sammen. Her er to badeværelser. Et med bruser og toilet og et med badekar. På værelset finder du fladskærms-tv, telefon, skrivebord, sofa og lænestol. Der er strygejern og -bræt samt deponeringsboks i garderoben. Superior-værelserne er beliggende på 2.-8. sal. Evt. 3 & 4 gæst er opredninger"
+
+        }]
+
+    },    
+    {
+        "name": "Holte",
+        "city": "Holte",
+        "area": "Sjælland",
+        "image": "/images/hotelimages/holte.webp",
+        "rooms" : [{
+            "type":"Standard double room",
+            "size":"16",
+            "price": "1500",
+            "image": "/images/roomimages/room2.webp",
+            "description": "Vores standard har to senge, der er skubbet sammen. Her er to badeværelser. Et med bruser og toilet og et med badekar. På værelset finder du fladskærms-tv, telefon, skrivebord, sofa og lænestol. Der er strygejern og -bræt samt deponeringsboks i garderoben. Superior-værelserne er beliggende på 2.-8. sal. Evt. 3 & 4 gæst er opredninger"
+        },
+        {
+            "type":"Standard twin room",
+            "size":"20",
+            "price": "1200",
+            "image": "/images/roomimages/room3.webp",
+            "description": "Vores twin har to senge, der er skubbet sammen. Her er to badeværelser. Et med bruser og toilet og et med badekar. På værelset finder du fladskærms-tv, telefon, skrivebord, sofa og lænestol. Der er strygejern og -bræt samt deponeringsboks i garderoben. Superior-værelserne er beliggende på 2.-8. sal. Evt. 3 & 4 gæst er opredninger"
+        },
+        {
+            "type":"Suite",
+            "size":"30",
+            "price": "2000",
+            "image": "/images/roomimages/room4.webp",
+            "description": "Vores standard har to senge, der er skubbet sammen. Her er to badeværelser. Et med bruser og toilet og et med badekar. På værelset finder du fladskærms-tv, telefon, skrivebord, sofa og lænestol. Der er strygejern og -bræt samt deponeringsboks i garderoben. Superior-værelserne er beliggende på 2.-8. sal. Evt. 3 & 4 gæst er opredninger"
+
+        },
+        {
+            "type":"Big room",
+            "size":"26",
+            "price": "2500",
+            "image": "/images/roomimages/room1.webp",
+            "description": "Vores room har to senge, der er skubbet sammen. Her er to badeværelser. Et med bruser og toilet og et med badekar. På værelset finder du fladskærms-tv, telefon, skrivebord, sofa og lænestol. Der er strygejern og -bræt samt deponeringsboks i garderoben. Superior-værelserne er beliggende på 2.-8. sal. Evt. 3 & 4 gæst er opredninger"
+        },
+        {
+            "type":"Standard triplet room",
+            "size":"20",
+            "price": "1200",
+            "image": "/images/roomimages/room5.webp",
+            "description": "Vores twin har to senge, der er skubbet sammen. Her er to badeværelser. Et med bruser og toilet og et med badekar. På værelset finder du fladskærms-tv, telefon, skrivebord, sofa og lænestol. Der er strygejern og -bræt samt deponeringsboks i garderoben. Superior-værelserne er beliggende på 2.-8. sal. Evt. 3 & 4 gæst er opredninger"
+        },
+        {
+            "type":"Suite",
+            "size":"50",
+            "price": "2500",
+            "image": "/images/roomimages/room6.webp",
+            "description": "Vores standard har to senge, der er skubbet sammen. Her er to badeværelser. Et med bruser og toilet og et med badekar. På værelset finder du fladskærms-tv, telefon, skrivebord, sofa og lænestol. Der er strygejern og -bræt samt deponeringsboks i garderoben. Superior-værelserne er beliggende på 2.-8. sal. Evt. 3 & 4 gæst er opredninger"
+
+        }]
+
+    },    
+    {
+        "name": "Klaskovgaard",
+        "city": "Korsør",
+        "area": "Sjælland",
+        "image": "/images/hotelimages/klaskovgaard.webp",
+        "rooms" : [{
+            "type":"Standard double room",
+            "size":"16",
+            "price": "1500",
+            "image": "/images/roomimages/room.webp",
+            "description": "Vores standard har to senge, der er skubbet sammen. Her er to badeværelser. Et med bruser og toilet og et med badekar. På værelset finder du fladskærms-tv, telefon, skrivebord, sofa og lænestol. Der er strygejern og -bræt samt deponeringsboks i garderoben. Superior-værelserne er beliggende på 2.-8. sal. Evt. 3 & 4 gæst er opredninger"
+        },
+        {
+            "type":"Standard twin room",
+            "size":"20",
+            "price": "1200",
+            "image": "/images/roomimages/room1.webp",
+            "description": "Vores twin har to senge, der er skubbet sammen. Her er to badeværelser. Et med bruser og toilet og et med badekar. På værelset finder du fladskærms-tv, telefon, skrivebord, sofa og lænestol. Der er strygejern og -bræt samt deponeringsboks i garderoben. Superior-værelserne er beliggende på 2.-8. sal. Evt. 3 & 4 gæst er opredninger"
+        },
+        {
+            "type":"Suite",
+            "size":"30",
+            "price": "2000",
+            "image": "/images/roomimages/room2.webp",
+            "description": "Vores standard har to senge, der er skubbet sammen. Her er to badeværelser. Et med bruser og toilet og et med badekar. På værelset finder du fladskærms-tv, telefon, skrivebord, sofa og lænestol. Der er strygejern og -bræt samt deponeringsboks i garderoben. Superior-værelserne er beliggende på 2.-8. sal. Evt. 3 & 4 gæst er opredninger"
+
+        },
+        {
+            "type":"Big room",
+            "size":"26",
+            "price": "2500",
+            "image": "/images/roomimages/room3.webp",
+            "description": "Vores room har to senge, der er skubbet sammen. Her er to badeværelser. Et med bruser og toilet og et med badekar. På værelset finder du fladskærms-tv, telefon, skrivebord, sofa og lænestol. Der er strygejern og -bræt samt deponeringsboks i garderoben. Superior-værelserne er beliggende på 2.-8. sal. Evt. 3 & 4 gæst er opredninger"
+        },
+        {
+            "type":"Standard triplet room",
+            "size":"20",
+            "price": "1200",
+            "image": "/images/roomimages/room4.webp",
+            "description": "Vores twin har to senge, der er skubbet sammen. Her er to badeværelser. Et med bruser og toilet og et med badekar. På værelset finder du fladskærms-tv, telefon, skrivebord, sofa og lænestol. Der er strygejern og -bræt samt deponeringsboks i garderoben. Superior-værelserne er beliggende på 2.-8. sal. Evt. 3 & 4 gæst er opredninger"
+        },
+        {
+            "type":"Suite",
+            "size":"50",
+            "price": "2500",
+            "image": "/images/roomimages/room5.webp",
+            "description": "Vores standard har to senge, der er skubbet sammen. Her er to badeværelser. Et med bruser og toilet og et med badekar. På værelset finder du fladskærms-tv, telefon, skrivebord, sofa og lænestol. Der er strygejern og -bræt samt deponeringsboks i garderoben. Superior-værelserne er beliggende på 2.-8. sal. Evt. 3 & 4 gæst er opredninger"
+
+        }]
+
+    },    
+    {
+        "name": "Køge Strand",
+        "city": "Køge",
+        "area": "Sjælland",
+        "image": "/images/hotelimages/kogestrand.webp",
+        "rooms" : [{
+            "type":"Standard double room",
+            "size":"16",
+            "price": "1500",
+            "image": "/images/roomimages/room6.webp",
+            "description": "Vores standard har to senge, der er skubbet sammen. Her er to badeværelser. Et med bruser og toilet og et med badekar. På værelset finder du fladskærms-tv, telefon, skrivebord, sofa og lænestol. Der er strygejern og -bræt samt deponeringsboks i garderoben. Superior-værelserne er beliggende på 2.-8. sal. Evt. 3 & 4 gæst er opredninger"
+        },
+        {
+            "type":"Standard twin room",
+            "size":"20",
+            "price": "1200",
+            "image": "/images/roomimages/room7.webp",
+            "description": "Vores twin har to senge, der er skubbet sammen. Her er to badeværelser. Et med bruser og toilet og et med badekar. På værelset finder du fladskærms-tv, telefon, skrivebord, sofa og lænestol. Der er strygejern og -bræt samt deponeringsboks i garderoben. Superior-værelserne er beliggende på 2.-8. sal. Evt. 3 & 4 gæst er opredninger"
+        },
+        {
+            "type":"Suite",
+            "size":"30",
+            "price": "2000",
+            "image": "/images/roomimages/room8.webp",
+            "description": "Vores standard har to senge, der er skubbet sammen. Her er to badeværelser. Et med bruser og toilet og et med badekar. På værelset finder du fladskærms-tv, telefon, skrivebord, sofa og lænestol. Der er strygejern og -bræt samt deponeringsboks i garderoben. Superior-værelserne er beliggende på 2.-8. sal. Evt. 3 & 4 gæst er opredninger"
+
+        },
+        {
+            "type":"Big room",
+            "size":"26",
+            "price": "2500",
+            "image": "/images/roomimages/room9.webp",
+            "description": "Vores room har to senge, der er skubbet sammen. Her er to badeværelser. Et med bruser og toilet og et med badekar. På værelset finder du fladskærms-tv, telefon, skrivebord, sofa og lænestol. Der er strygejern og -bræt samt deponeringsboks i garderoben. Superior-værelserne er beliggende på 2.-8. sal. Evt. 3 & 4 gæst er opredninger"
+        },
+        {
+            "type":"Standard triplet room",
+            "size":"20",
+            "price": "1200",
+            "image": "/images/roomimages/room10.webp",
+            "description": "Vores twin har to senge, der er skubbet sammen. Her er to badeværelser. Et med bruser og toilet og et med badekar. På værelset finder du fladskærms-tv, telefon, skrivebord, sofa og lænestol. Der er strygejern og -bræt samt deponeringsboks i garderoben. Superior-værelserne er beliggende på 2.-8. sal. Evt. 3 & 4 gæst er opredninger"
+        },
+        {
+            "type":"Suite",
+            "size":"50",
+            "price": "2500",
+            "image": "/images/roomimages/room11.webp",
+            "description": "Vores standard har to senge, der er skubbet sammen. Her er to badeværelser. Et med bruser og toilet og et med badekar. På værelset finder du fladskærms-tv, telefon, skrivebord, sofa og lænestol. Der er strygejern og -bræt samt deponeringsboks i garderoben. Superior-værelserne er beliggende på 2.-8. sal. Evt. 3 & 4 gæst er opredninger"
+
+        }]
+
+    },    
+    {
+        "name": "Roskilde",
+        "city": "Roskilde",
+        "area": "Sjælland",
+        "image": "/images/hotelimages/roskilde.webp",
+        "rooms" : [{
+            "type":"Standard double room",
+            "size":"16",
+            "price": "1500",
+            "image": "/images/roomimages/room12.webp",
+            "description": "Vores standard har to senge, der er skubbet sammen. Her er to badeværelser. Et med bruser og toilet og et med badekar. På værelset finder du fladskærms-tv, telefon, skrivebord, sofa og lænestol. Der er strygejern og -bræt samt deponeringsboks i garderoben. Superior-værelserne er beliggende på 2.-8. sal. Evt. 3 & 4 gæst er opredninger"
+        },
+        {
+            "type":"Standard twin room",
+            "size":"20",
+            "price": "1200",
+            "image": "/images/roomimages/room13.webp",
+            "description": "Vores twin har to senge, der er skubbet sammen. Her er to badeværelser. Et med bruser og toilet og et med badekar. På værelset finder du fladskærms-tv, telefon, skrivebord, sofa og lænestol. Der er strygejern og -bræt samt deponeringsboks i garderoben. Superior-værelserne er beliggende på 2.-8. sal. Evt. 3 & 4 gæst er opredninger"
+        },
+        {
+            "type":"Suite",
+            "size":"30",
+            "price": "2000",
+            "image": "/images/roomimages/room14.webp",
+            "description": "Vores standard har to senge, der er skubbet sammen. Her er to badeværelser. Et med bruser og toilet og et med badekar. På værelset finder du fladskærms-tv, telefon, skrivebord, sofa og lænestol. Der er strygejern og -bræt samt deponeringsboks i garderoben. Superior-værelserne er beliggende på 2.-8. sal. Evt. 3 & 4 gæst er opredninger"
+
+        },
+        {
+            "type":"Big room",
+            "size":"26",
+            "price": "2500",
+            "image": "/images/roomimages/room15.webp",
+            "description": "Vores room har to senge, der er skubbet sammen. Her er to badeværelser. Et med bruser og toilet og et med badekar. På værelset finder du fladskærms-tv, telefon, skrivebord, sofa og lænestol. Der er strygejern og -bræt samt deponeringsboks i garderoben. Superior-værelserne er beliggende på 2.-8. sal. Evt. 3 & 4 gæst er opredninger"
+        },
+        {
+            "type":"Standard triplet room",
+            "size":"20",
+            "price": "1200",
+            "image": "/images/roomimages/room.webp",
+            "description": "Vores twin har to senge, der er skubbet sammen. Her er to badeværelser. Et med bruser og toilet og et med badekar. På værelset finder du fladskærms-tv, telefon, skrivebord, sofa og lænestol. Der er strygejern og -bræt samt deponeringsboks i garderoben. Superior-værelserne er beliggende på 2.-8. sal. Evt. 3 & 4 gæst er opredninger"
+        },
+        {
+            "type":"Suite",
+            "size":"50",
+            "price": "2500",
+            "image": "/images/roomimages/room6.webp",
+            "description": "Vores standard har to senge, der er skubbet sammen. Her er to badeværelser. Et med bruser og toilet og et med badekar. På værelset finder du fladskærms-tv, telefon, skrivebord, sofa og lænestol. Der er strygejern og -bræt samt deponeringsboks i garderoben. Superior-værelserne er beliggende på 2.-8. sal. Evt. 3 & 4 gæst er opredninger"
+
+        }]
+
+    },    
+    {
+        "name": "H.C. Andersen Odense",
+        "city": "Odense",
+        "area": "Fyn",
+        "image": "/images/hotelimages/hcodense.webp",
+        "rooms" : [{
+            "type":"Standard double room",
+            "size":"16",
+            "price": "1500",
+            "image": "/images/roomimages/room11.webp",
+            "description": "Vores standard har to senge, der er skubbet sammen. Her er to badeværelser. Et med bruser og toilet og et med badekar. På værelset finder du fladskærms-tv, telefon, skrivebord, sofa og lænestol. Der er strygejern og -bræt samt deponeringsboks i garderoben. Superior-værelserne er beliggende på 2.-8. sal. Evt. 3 & 4 gæst er opredninger"
+        },
+        {
+            "type":"Standard twin room",
+            "size":"20",
+            "price": "1200",
+            "image": "/images/roomimages/room13.webp",
+            "description": "Vores twin har to senge, der er skubbet sammen. Her er to badeværelser. Et med bruser og toilet og et med badekar. På værelset finder du fladskærms-tv, telefon, skrivebord, sofa og lænestol. Der er strygejern og -bræt samt deponeringsboks i garderoben. Superior-værelserne er beliggende på 2.-8. sal. Evt. 3 & 4 gæst er opredninger"
+        },
+        {
+            "type":"Suite",
+            "size":"30",
+            "price": "2000",
+            "image": "/images/roomimages/room4.webp",
+            "description": "Vores standard har to senge, der er skubbet sammen. Her er to badeværelser. Et med bruser og toilet og et med badekar. På værelset finder du fladskærms-tv, telefon, skrivebord, sofa og lænestol. Der er strygejern og -bræt samt deponeringsboks i garderoben. Superior-værelserne er beliggende på 2.-8. sal. Evt. 3 & 4 gæst er opredninger"
+
+        },
+        {
+            "type":"Big room",
+            "size":"26",
+            "price": "2500",
+            "image": "/images/roomimages/room11.webp",
+            "description": "Vores room har to senge, der er skubbet sammen. Her er to badeværelser. Et med bruser og toilet og et med badekar. På værelset finder du fladskærms-tv, telefon, skrivebord, sofa og lænestol. Der er strygejern og -bræt samt deponeringsboks i garderoben. Superior-værelserne er beliggende på 2.-8. sal. Evt. 3 & 4 gæst er opredninger"
+        },
+        {
+            "type":"Standard triplet room",
+            "size":"20",
+            "price": "1200",
+            "image": "/images/roomimages/room9.webp",
+            "description": "Vores twin har to senge, der er skubbet sammen. Her er to badeværelser. Et med bruser og toilet og et med badekar. På værelset finder du fladskærms-tv, telefon, skrivebord, sofa og lænestol. Der er strygejern og -bræt samt deponeringsboks i garderoben. Superior-værelserne er beliggende på 2.-8. sal. Evt. 3 & 4 gæst er opredninger"
+        },
+        {
+            "type":"Suite",
+            "size":"50",
+            "price": "2500",
+            "image": "/images/roomimages/room8.webp",
+            "description": "Vores standard har to senge, der er skubbet sammen. Her er to badeværelser. Et med bruser og toilet og et med badekar. På værelset finder du fladskærms-tv, telefon, skrivebord, sofa og lænestol. Der er strygejern og -bræt samt deponeringsboks i garderoben. Superior-værelserne er beliggende på 2.-8. sal. Evt. 3 & 4 gæst er opredninger"
+
+        }]
+
+    },    
+    {
+        "name": "Kongebrogaarden",
+        "city": "Middelfart",
+        "area": "Fyn",
+        "image": "/images/hotelimages/kongenbrogaarden.webp",
+        "rooms" : [{
+            "type":"Standard double room",
+            "size":"16",
+            "price": "1500",
+            "image": "/images/roomimages/room9.webp",
+            "description": "Vores standard har to senge, der er skubbet sammen. Her er to badeværelser. Et med bruser og toilet og et med badekar. På værelset finder du fladskærms-tv, telefon, skrivebord, sofa og lænestol. Der er strygejern og -bræt samt deponeringsboks i garderoben. Superior-værelserne er beliggende på 2.-8. sal. Evt. 3 & 4 gæst er opredninger"
+        },
+        {
+            "type":"Standard twin room",
+            "size":"20",
+            "price": "1200",
+            "image": "/images/roomimages/room3.webp",
+            "description": "Vores twin har to senge, der er skubbet sammen. Her er to badeværelser. Et med bruser og toilet og et med badekar. På værelset finder du fladskærms-tv, telefon, skrivebord, sofa og lænestol. Der er strygejern og -bræt samt deponeringsboks i garderoben. Superior-værelserne er beliggende på 2.-8. sal. Evt. 3 & 4 gæst er opredninger"
+        },
+        {
+            "type":"Suite",
+            "size":"30",
+            "price": "2000",
+            "image": "/images/roomimages/room.webp",
+            "description": "Vores standard har to senge, der er skubbet sammen. Her er to badeværelser. Et med bruser og toilet og et med badekar. På værelset finder du fladskærms-tv, telefon, skrivebord, sofa og lænestol. Der er strygejern og -bræt samt deponeringsboks i garderoben. Superior-værelserne er beliggende på 2.-8. sal. Evt. 3 & 4 gæst er opredninger"
+
+        },
+        {
+            "type":"Big room",
+            "size":"26",
+            "price": "2500",
+            "image": "/images/roomimages/room8.webp",
+            "description": "Vores room har to senge, der er skubbet sammen. Her er to badeværelser. Et med bruser og toilet og et med badekar. På værelset finder du fladskærms-tv, telefon, skrivebord, sofa og lænestol. Der er strygejern og -bræt samt deponeringsboks i garderoben. Superior-værelserne er beliggende på 2.-8. sal. Evt. 3 & 4 gæst er opredninger"
+        },
+        {
+            "type":"Standard triplet room",
+            "size":"20",
+            "price": "1200",
+            "image": "/images/roomimages/room3.webp",
+            "description": "Vores twin har to senge, der er skubbet sammen. Her er to badeværelser. Et med bruser og toilet og et med badekar. På værelset finder du fladskærms-tv, telefon, skrivebord, sofa og lænestol. Der er strygejern og -bræt samt deponeringsboks i garderoben. Superior-værelserne er beliggende på 2.-8. sal. Evt. 3 & 4 gæst er opredninger"
+        },
+        {
+            "type":"Suite",
+            "size":"50",
+            "price": "2500",
+            "image": "/images/roomimages/room6.webp",
+            "description": "Vores standard har to senge, der er skubbet sammen. Her er to badeværelser. Et med bruser og toilet og et med badekar. På værelset finder du fladskærms-tv, telefon, skrivebord, sofa og lænestol. Der er strygejern og -bræt samt deponeringsboks i garderoben. Superior-værelserne er beliggende på 2.-8. sal. Evt. 3 & 4 gæst er opredninger"
+
+        }]
+
+    },    
+    {
+        "name": "Aarhus",
+        "city": "Aarhus",
+        "area": "Jylland",
+        "image": "/images/hotelimages/aarhus.webp",
+        "rooms" : [{
+            "type":"Standard double room",
+            "size":"16",
+            "price": "1500",
+            "image": "/images/roomimages/room8.webp",
+            "description": "Vores standard har to senge, der er skubbet sammen. Her er to badeværelser. Et med bruser og toilet og et med badekar. På værelset finder du fladskærms-tv, telefon, skrivebord, sofa og lænestol. Der er strygejern og -bræt samt deponeringsboks i garderoben. Superior-værelserne er beliggende på 2.-8. sal. Evt. 3 & 4 gæst er opredninger"
+        },
+        {
+            "type":"Standard twin room",
+            "size":"20",
+            "price": "1200",
+            "image": "/images/roomimages/room15.webp",
+            "description": "Vores twin har to senge, der er skubbet sammen. Her er to badeværelser. Et med bruser og toilet og et med badekar. På værelset finder du fladskærms-tv, telefon, skrivebord, sofa og lænestol. Der er strygejern og -bræt samt deponeringsboks i garderoben. Superior-værelserne er beliggende på 2.-8. sal. Evt. 3 & 4 gæst er opredninger"
+        },
+        {
+            "type":"Suite",
+            "size":"30",
+            "price": "2000",
+            "image": "/images/roomimages/room11.webp",
+            "description": "Vores standard har to senge, der er skubbet sammen. Her er to badeværelser. Et med bruser og toilet og et med badekar. På værelset finder du fladskærms-tv, telefon, skrivebord, sofa og lænestol. Der er strygejern og -bræt samt deponeringsboks i garderoben. Superior-værelserne er beliggende på 2.-8. sal. Evt. 3 & 4 gæst er opredninger"
+
+        },
+        {
+            "type":"Big room",
+            "size":"26",
+            "price": "2500",
+            "image": "/images/roomimages/room10.webp",
+            "description": "Vores room har to senge, der er skubbet sammen. Her er to badeværelser. Et med bruser og toilet og et med badekar. På værelset finder du fladskærms-tv, telefon, skrivebord, sofa og lænestol. Der er strygejern og -bræt samt deponeringsboks i garderoben. Superior-værelserne er beliggende på 2.-8. sal. Evt. 3 & 4 gæst er opredninger"
+        },
+        {
+            "type":"Standard triplet room",
+            "size":"20",
+            "price": "1200",
+            "image": "/images/roomimages/room5.webp",
+            "description": "Vores twin har to senge, der er skubbet sammen. Her er to badeværelser. Et med bruser og toilet og et med badekar. På værelset finder du fladskærms-tv, telefon, skrivebord, sofa og lænestol. Der er strygejern og -bræt samt deponeringsboks i garderoben. Superior-værelserne er beliggende på 2.-8. sal. Evt. 3 & 4 gæst er opredninger"
+        },
+        {
+            "type":"Suite",
+            "size":"50",
+            "price": "2500",
+            "image": "/images/roomimages/room9.webp",
+            "description": "Vores standard har to senge, der er skubbet sammen. Her er to badeværelser. Et med bruser og toilet og et med badekar. På værelset finder du fladskærms-tv, telefon, skrivebord, sofa og lænestol. Der er strygejern og -bræt samt deponeringsboks i garderoben. Superior-værelserne er beliggende på 2.-8. sal. Evt. 3 & 4 gæst er opredninger"
+
+        }]
+
+    },    
+    {
+        "name": "Bygholm Park",
+        "city": "Horsens",
+        "area": "Jylland",
+        "image": "/images/hotelimages/bygholmpark.webp",
+        "rooms" : [{
+            "type":"Standard double room",
+            "size":"16",
+            "price": "1500",
+            "image": "/images/roomimages/room2.webp",
+            "description": "Vores standard har to senge, der er skubbet sammen. Her er to badeværelser. Et med bruser og toilet og et med badekar. På værelset finder du fladskærms-tv, telefon, skrivebord, sofa og lænestol. Der er strygejern og -bræt samt deponeringsboks i garderoben. Superior-værelserne er beliggende på 2.-8. sal. Evt. 3 & 4 gæst er opredninger"
+        },
+        {
+            "type":"Standard twin room",
+            "size":"20",
+            "price": "1200",
+            "image": "/images/roomimages/room1.webp",
+            "description": "Vores twin har to senge, der er skubbet sammen. Her er to badeværelser. Et med bruser og toilet og et med badekar. På værelset finder du fladskærms-tv, telefon, skrivebord, sofa og lænestol. Der er strygejern og -bræt samt deponeringsboks i garderoben. Superior-værelserne er beliggende på 2.-8. sal. Evt. 3 & 4 gæst er opredninger"
+        },
+        {
+            "type":"Suite",
+            "size":"30",
+            "price": "2000",
+            "image": "/images/roomimages/room6.webp",
+            "description": "Vores standard har to senge, der er skubbet sammen. Her er to badeværelser. Et med bruser og toilet og et med badekar. På værelset finder du fladskærms-tv, telefon, skrivebord, sofa og lænestol. Der er strygejern og -bræt samt deponeringsboks i garderoben. Superior-værelserne er beliggende på 2.-8. sal. Evt. 3 & 4 gæst er opredninger"
+
+        },
+        {
+            "type":"Big room",
+            "size":"26",
+            "price": "2500",
+            "image": "/images/roomimages/room12.webp",
+            "description": "Vores room har to senge, der er skubbet sammen. Her er to badeværelser. Et med bruser og toilet og et med badekar. På værelset finder du fladskærms-tv, telefon, skrivebord, sofa og lænestol. Der er strygejern og -bræt samt deponeringsboks i garderoben. Superior-værelserne er beliggende på 2.-8. sal. Evt. 3 & 4 gæst er opredninger"
+        },
+        {
+            "type":"Standard triplet room",
+            "size":"20",
+            "price": "1200",
+            "image": "/images/roomimages/room15.webp",
+            "description": "Vores twin har to senge, der er skubbet sammen. Her er to badeværelser. Et med bruser og toilet og et med badekar. På værelset finder du fladskærms-tv, telefon, skrivebord, sofa og lænestol. Der er strygejern og -bræt samt deponeringsboks i garderoben. Superior-værelserne er beliggende på 2.-8. sal. Evt. 3 & 4 gæst er opredninger"
+        },
+        {
+            "type":"Suite",
+            "size":"50",
+            "price": "2500",
+            "image": "/images/roomimages/room7.webp",
+            "description": "Vores standard har to senge, der er skubbet sammen. Her er to badeværelser. Et med bruser og toilet og et med badekar. På værelset finder du fladskærms-tv, telefon, skrivebord, sofa og lænestol. Der er strygejern og -bræt samt deponeringsboks i garderoben. Superior-værelserne er beliggende på 2.-8. sal. Evt. 3 & 4 gæst er opredninger"
+
+        }]
+
+    },    
+    {
+        "name": "Hvide Hus Aalborg",
+        "city": "Aalborg",
+        "area": "Jylland",
+        "image": "/images/hotelimages/hvidehusaalborg.webp",
+        "rooms" : [{
+            "type":"Standard double room",
+            "size":"16",
+            "price": "1500",
+            "image": "/images/roomimages/room2.webp",
+            "description": "Vores standard har to senge, der er skubbet sammen. Her er to badeværelser. Et med bruser og toilet og et med badekar. På værelset finder du fladskærms-tv, telefon, skrivebord, sofa og lænestol. Der er strygejern og -bræt samt deponeringsboks i garderoben. Superior-værelserne er beliggende på 2.-8. sal. Evt. 3 & 4 gæst er opredninger"
+        },
+        {
+            "type":"Standard twin room",
+            "size":"20",
+            "price": "1200",
+            "image": "/images/roomimages/room10.webp",
+            "description": "Vores twin har to senge, der er skubbet sammen. Her er to badeværelser. Et med bruser og toilet og et med badekar. På værelset finder du fladskærms-tv, telefon, skrivebord, sofa og lænestol. Der er strygejern og -bræt samt deponeringsboks i garderoben. Superior-værelserne er beliggende på 2.-8. sal. Evt. 3 & 4 gæst er opredninger"
+        },
+        {
+            "type":"Suite",
+            "size":"30",
+            "price": "2000",
+            "image": "/images/roomimages/room14.webp",
+            "description": "Vores standard har to senge, der er skubbet sammen. Her er to badeværelser. Et med bruser og toilet og et med badekar. På værelset finder du fladskærms-tv, telefon, skrivebord, sofa og lænestol. Der er strygejern og -bræt samt deponeringsboks i garderoben. Superior-værelserne er beliggende på 2.-8. sal. Evt. 3 & 4 gæst er opredninger"
+
+        },
+        {
+            "type":"Big room",
+            "size":"26",
+            "price": "2500",
+            "image": "/images/roomimages/room6.webp",
+            "description": "Vores room har to senge, der er skubbet sammen. Her er to badeværelser. Et med bruser og toilet og et med badekar. På værelset finder du fladskærms-tv, telefon, skrivebord, sofa og lænestol. Der er strygejern og -bræt samt deponeringsboks i garderoben. Superior-værelserne er beliggende på 2.-8. sal. Evt. 3 & 4 gæst er opredninger"
+        },
+        {
+            "type":"Standard triplet room",
+            "size":"20",
+            "price": "1200",
+            "image": "/images/roomimages/room5.webp",
+            "description": "Vores twin har to senge, der er skubbet sammen. Her er to badeværelser. Et med bruser og toilet og et med badekar. På værelset finder du fladskærms-tv, telefon, skrivebord, sofa og lænestol. Der er strygejern og -bræt samt deponeringsboks i garderoben. Superior-værelserne er beliggende på 2.-8. sal. Evt. 3 & 4 gæst er opredninger"
+        },
+        {
+            "type":"Suite",
+            "size":"50",
+            "price": "2500",
+            "image": "/images/roomimages/room7.webp",
+            "description": "Vores standard har to senge, der er skubbet sammen. Her er to badeværelser. Et med bruser og toilet og et med badekar. På værelset finder du fladskærms-tv, telefon, skrivebord, sofa og lænestol. Der er strygejern og -bræt samt deponeringsboks i garderoben. Superior-værelserne er beliggende på 2.-8. sal. Evt. 3 & 4 gæst er opredninger"
+
+        }]
+
+    },    
+    {
+        "name": "Kellers Park",
+        "city": "Børkop",
+        "area": "Jylland",
+        "image": "/images/hotelimages/kellerspark.webp",
+        "rooms" : [{
+            "type":"Standard double room",
+            "size":"16",
+            "price": "1500",
+            "image": "/images/roomimages/room5.webp",
+            "description": "Vores standard har to senge, der er skubbet sammen. Her er to badeværelser. Et med bruser og toilet og et med badekar. På værelset finder du fladskærms-tv, telefon, skrivebord, sofa og lænestol. Der er strygejern og -bræt samt deponeringsboks i garderoben. Superior-værelserne er beliggende på 2.-8. sal. Evt. 3 & 4 gæst er opredninger"
+        },
+        {
+            "type":"Standard twin room",
+            "size":"20",
+            "price": "1200",
+            "image": "/images/roomimages/room8.webp",
+            "description": "Vores twin har to senge, der er skubbet sammen. Her er to badeværelser. Et med bruser og toilet og et med badekar. På værelset finder du fladskærms-tv, telefon, skrivebord, sofa og lænestol. Der er strygejern og -bræt samt deponeringsboks i garderoben. Superior-værelserne er beliggende på 2.-8. sal. Evt. 3 & 4 gæst er opredninger"
+        },
+        {
+            "type":"Suite",
+            "size":"30",
+            "price": "2000",
+            "image": "/images/roomimages/room4.webp",
+            "description": "Vores standard har to senge, der er skubbet sammen. Her er to badeværelser. Et med bruser og toilet og et med badekar. På værelset finder du fladskærms-tv, telefon, skrivebord, sofa og lænestol. Der er strygejern og -bræt samt deponeringsboks i garderoben. Superior-værelserne er beliggende på 2.-8. sal. Evt. 3 & 4 gæst er opredninger"
+
+        },
+        {
+            "type":"Big room",
+            "size":"26",
+            "price": "2500",
+            "image": "/images/roomimages/room14.webp",
+            "description": "Vores room har to senge, der er skubbet sammen. Her er to badeværelser. Et med bruser og toilet og et med badekar. På værelset finder du fladskærms-tv, telefon, skrivebord, sofa og lænestol. Der er strygejern og -bræt samt deponeringsboks i garderoben. Superior-værelserne er beliggende på 2.-8. sal. Evt. 3 & 4 gæst er opredninger"
+        },
+        {
+            "type":"Standard triplet room",
+            "size":"20",
+            "price": "1200",
+            "image": "/images/roomimages/room6.webp",
+            "description": "Vores twin har to senge, der er skubbet sammen. Her er to badeværelser. Et med bruser og toilet og et med badekar. På værelset finder du fladskærms-tv, telefon, skrivebord, sofa og lænestol. Der er strygejern og -bræt samt deponeringsboks i garderoben. Superior-værelserne er beliggende på 2.-8. sal. Evt. 3 & 4 gæst er opredninger"
+        },
+        {
+            "type":"Suite",
+            "size":"50",
+            "price": "2500",
+            "image": "/images/roomimages/room7.webp",
+            "description": "Vores standard har to senge, der er skubbet sammen. Her er to badeværelser. Et med bruser og toilet og et med badekar. På værelset finder du fladskærms-tv, telefon, skrivebord, sofa og lænestol. Der er strygejern og -bræt samt deponeringsboks i garderoben. Superior-værelserne er beliggende på 2.-8. sal. Evt. 3 & 4 gæst er opredninger"
+
+        }]
+
+    },    
+    {
+        "name": "Kolding",
+        "city": "Kolding",
+        "area": "Jylland",
+        "image": "/images/hotelimages/kolding.webp",
+        "rooms" : [{
+            "type":"Standard double room",
+            "size":"16",
+            "price": "1500",
+            "image": "/images/roomimages/room12.webp",
+            "description": "Vores standard har to senge, der er skubbet sammen. Her er to badeværelser. Et med bruser og toilet og et med badekar. På værelset finder du fladskærms-tv, telefon, skrivebord, sofa og lænestol. Der er strygejern og -bræt samt deponeringsboks i garderoben. Superior-værelserne er beliggende på 2.-8. sal. Evt. 3 & 4 gæst er opredninger"
+        },
+        {
+            "type":"Standard twin room",
+            "size":"20",
+            "price": "1200",
+            "image": "/images/roomimages/room1.webp",
+            "description": "Vores twin har to senge, der er skubbet sammen. Her er to badeværelser. Et med bruser og toilet og et med badekar. På værelset finder du fladskærms-tv, telefon, skrivebord, sofa og lænestol. Der er strygejern og -bræt samt deponeringsboks i garderoben. Superior-værelserne er beliggende på 2.-8. sal. Evt. 3 & 4 gæst er opredninger"
+        },
+        {
+            "type":"Suite",
+            "size":"30",
+            "price": "2000",
+            "image": "/images/roomimages/room2.webp",
+            "description": "Vores standard har to senge, der er skubbet sammen. Her er to badeværelser. Et med bruser og toilet og et med badekar. På værelset finder du fladskærms-tv, telefon, skrivebord, sofa og lænestol. Der er strygejern og -bræt samt deponeringsboks i garderoben. Superior-værelserne er beliggende på 2.-8. sal. Evt. 3 & 4 gæst er opredninger"
+
+        },
+        {
+            "type":"Big room",
+            "size":"26",
+            "price": "2500",
+            "image": "/images/roomimages/room3.webp",
+            "description": "Vores room har to senge, der er skubbet sammen. Her er to badeværelser. Et med bruser og toilet og et med badekar. På værelset finder du fladskærms-tv, telefon, skrivebord, sofa og lænestol. Der er strygejern og -bræt samt deponeringsboks i garderoben. Superior-værelserne er beliggende på 2.-8. sal. Evt. 3 & 4 gæst er opredninger"
+        },
+        {
+            "type":"Standard triplet room",
+            "size":"20",
+            "price": "1200",
+            "image": "/images/roomimages/room4.webp",
+            "description": "Vores twin har to senge, der er skubbet sammen. Her er to badeværelser. Et med bruser og toilet og et med badekar. På værelset finder du fladskærms-tv, telefon, skrivebord, sofa og lænestol. Der er strygejern og -bræt samt deponeringsboks i garderoben. Superior-værelserne er beliggende på 2.-8. sal. Evt. 3 & 4 gæst er opredninger"
+        },
+        {
+            "type":"Suite",
+            "size":"50",
+            "price": "2500",
+            "image": "/images/roomimages/room5.webp",
+            "description": "Vores standard har to senge, der er skubbet sammen. Her er to badeværelser. Et med bruser og toilet og et med badekar. På værelset finder du fladskærms-tv, telefon, skrivebord, sofa og lænestol. Der er strygejern og -bræt samt deponeringsboks i garderoben. Superior-værelserne er beliggende på 2.-8. sal. Evt. 3 & 4 gæst er opredninger"
+
+        }
+    ]
+    },    
+    {
+        "name": "Rebild Bakker",
+        "city": "Skørping",
+        "area": "Jylland",
+        "image": "/images/hotelimages/rebildbakker.webp",
+        "rooms" : [{
+            "type":"Standard double room",
+            "size":"16",
+            "price": "1500",
+            "image": "/images/roomimages/room6.webp",
+            "description": "Vores standard har to senge, der er skubbet sammen. Her er to badeværelser. Et med bruser og toilet og et med badekar. På værelset finder du fladskærms-tv, telefon, skrivebord, sofa og lænestol. Der er strygejern og -bræt samt deponeringsboks i garderoben. Superior-værelserne er beliggende på 2.-8. sal. Evt. 3 & 4 gæst er opredninger"
+        },
+        {
+            "type":"Standard twin room",
+            "size":"20",
+            "price": "1200",
+            "image": "/images/roomimages/room7.webp",
+            "description": "Vores twin har to senge, der er skubbet sammen. Her er to badeværelser. Et med bruser og toilet og et med badekar. På værelset finder du fladskærms-tv, telefon, skrivebord, sofa og lænestol. Der er strygejern og -bræt samt deponeringsboks i garderoben. Superior-værelserne er beliggende på 2.-8. sal. Evt. 3 & 4 gæst er opredninger"
+        },
+        {
+            "type":"Suite",
+            "size":"30",
+            "price": "2000",
+            "image": "/images/roomimages/room8.webp",
+            "description": "Vores standard har to senge, der er skubbet sammen. Her er to badeværelser. Et med bruser og toilet og et med badekar. På værelset finder du fladskærms-tv, telefon, skrivebord, sofa og lænestol. Der er strygejern og -bræt samt deponeringsboks i garderoben. Superior-værelserne er beliggende på 2.-8. sal. Evt. 3 & 4 gæst er opredninger"
+
+        },
+        {
+            "type":"Big room",
+            "size":"26",
+            "price": "2500",
+            "image": "/images/roomimages/room9.webp",
+            "description": "Vores room har to senge, der er skubbet sammen. Her er to badeværelser. Et med bruser og toilet og et med badekar. På værelset finder du fladskærms-tv, telefon, skrivebord, sofa og lænestol. Der er strygejern og -bræt samt deponeringsboks i garderoben. Superior-værelserne er beliggende på 2.-8. sal. Evt. 3 & 4 gæst er opredninger"
+        },
+        {
+            "type":"Standard triplet room",
+            "size":"20",
+            "price": "1200",
+            "image": "/images/roomimages/room10.webp",
+            "description": "Vores twin har to senge, der er skubbet sammen. Her er to badeværelser. Et med bruser og toilet og et med badekar. På værelset finder du fladskærms-tv, telefon, skrivebord, sofa og lænestol. Der er strygejern og -bræt samt deponeringsboks i garderoben. Superior-værelserne er beliggende på 2.-8. sal. Evt. 3 & 4 gæst er opredninger"
+        },
+        {
+            "type":"Suite",
+            "size":"50",
+            "price": "2500",
+            "image": "/images/roomimages/room11.webp",
+            "description": "Vores standard har to senge, der er skubbet sammen. Her er to badeværelser. Et med bruser og toilet og et med badekar. På værelset finder du fladskærms-tv, telefon, skrivebord, sofa og lænestol. Der er strygejern og -bræt samt deponeringsboks i garderoben. Superior-værelserne er beliggende på 2.-8. sal. Evt. 3 & 4 gæst er opredninger"
+
+        }]
+
+    },    
+    {
+        "name": "Centralværkstedet",
+        "city": "Aarhus",
+        "area": "Jylland",
+        "image": "/images/hotelimages/centralvaerkstedet.webp",
+        "rooms" : [{
+            "type":"Standard double room",
+            "size":"16",
+            "price": "1500",
+            "image": "/images/roomimages/room12.webp",
+            "description": "Vores standard har to senge, der er skubbet sammen. Her er to badeværelser. Et med bruser og toilet og et med badekar. På værelset finder du fladskærms-tv, telefon, skrivebord, sofa og lænestol. Der er strygejern og -bræt samt deponeringsboks i garderoben. Superior-værelserne er beliggende på 2.-8. sal. Evt. 3 & 4 gæst er opredninger"
+        },
+        {
+            "type":"Standard twin room",
+            "size":"20",
+            "price": "1200",
+            "image": "/images/roomimages/room13.webp",
+            "description": "Vores twin har to senge, der er skubbet sammen. Her er to badeværelser. Et med bruser og toilet og et med badekar. På værelset finder du fladskærms-tv, telefon, skrivebord, sofa og lænestol. Der er strygejern og -bræt samt deponeringsboks i garderoben. Superior-værelserne er beliggende på 2.-8. sal. Evt. 3 & 4 gæst er opredninger"
+        },
+        {
+            "type":"Suite",
+            "size":"30",
+            "price": "2000",
+            "image": "/images/roomimages/room14.webp",
+            "description": "Vores standard har to senge, der er skubbet sammen. Her er to badeværelser. Et med bruser og toilet og et med badekar. På værelset finder du fladskærms-tv, telefon, skrivebord, sofa og lænestol. Der er strygejern og -bræt samt deponeringsboks i garderoben. Superior-værelserne er beliggende på 2.-8. sal. Evt. 3 & 4 gæst er opredninger"
+
+        },
+        {
+            "type":"Big room",
+            "size":"26",
+            "price": "2500",
+            "image": "/images/roomimages/room15.webp",
+            "description": "Vores room har to senge, der er skubbet sammen. Her er to badeværelser. Et med bruser og toilet og et med badekar. På værelset finder du fladskærms-tv, telefon, skrivebord, sofa og lænestol. Der er strygejern og -bræt samt deponeringsboks i garderoben. Superior-værelserne er beliggende på 2.-8. sal. Evt. 3 & 4 gæst er opredninger"
+        },
+        {
+            "type":"Standard triplet room",
+            "size":"20",
+            "price": "1200",
+            "image": "/images/roomimages/room5.webp",
+            "description": "Vores twin har to senge, der er skubbet sammen. Her er to badeværelser. Et med bruser og toilet og et med badekar. På værelset finder du fladskærms-tv, telefon, skrivebord, sofa og lænestol. Der er strygejern og -bræt samt deponeringsboks i garderoben. Superior-værelserne er beliggende på 2.-8. sal. Evt. 3 & 4 gæst er opredninger"
+        },
+        {
+            "type":"Suite",
+            "size":"50",
+            "price": "2500",
+            "image": "/images/roomimages/room6.webp",
+            "description": "Vores standard har to senge, der er skubbet sammen. Her er to badeværelser. Et med bruser og toilet og et med badekar. På værelset finder du fladskærms-tv, telefon, skrivebord, sofa og lænestol. Der er strygejern og -bræt samt deponeringsboks i garderoben. Superior-værelserne er beliggende på 2.-8. sal. Evt. 3 & 4 gæst er opredninger"
+
+        }]
     }
 ]
