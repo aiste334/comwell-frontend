@@ -4,10 +4,33 @@ import Paragraph from '../../ui/text/Paragraph'
 import Input from '../../ui/inputs/Input'
 import DrawerPrimaryButton from '../../ui/buttons/DrawerPrimaryButton'
 import InputOption from '../../ui/inputs/InputOption'
+import { redirect } from 'next/dist/server/api-utils'
 
 const RegisterForm = () => {
 
-  const [userData, setUserData] = useState({})
+  const [userData, setUserData] = useState({});
+
+  // Handle user registration
+  const handleRegistration = async () => {
+    try {
+      //here we will need to YEET our actual API if its different
+      const response = await fetch('/api/register', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(userData),
+      });
+
+      if (response.ok) {
+        console.log('Registration successful!');
+      } else {
+        console.error('Registration failed.');
+      }
+    } catch (error) {
+      console.error('Error during registration:', error);
+    }
+  };
 
   return (
     <div className='flex flex-col h-full'>
@@ -31,7 +54,7 @@ const RegisterForm = () => {
         <Input label="Date of birth" value={userData.name} type="date" onChange={(e) => setUserData(prev => ({...prev, name: e.target.value}))}/>
       </div>
 
-      <DrawerPrimaryButton>Register</DrawerPrimaryButton>
+      <DrawerPrimaryButton onClick={handleRegistration}>Register</DrawerPrimaryButton>
     </div>
   )
 }

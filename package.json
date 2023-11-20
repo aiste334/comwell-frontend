@@ -9,7 +9,9 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "keen-slider": "^6.8.6",
     "next": "14.0.0",
+    "next-auth": "^4.24.5",
     "react": "^18",
     "react-dom": "^18",
     "react-form-hook": "^0.0.1",
