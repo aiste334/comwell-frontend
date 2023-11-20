@@ -1,8 +1,8 @@
 import React from 'react'
 import SmallFloaterBlack from '../ui/SmallFloaterBlack'
 import Image from 'next/image'
-import Title from '../ui/Title'
-import STitle from '../ui/STitle'
+import STitle from '../ui/text/STitle'
+import Title from '../ui/text/Title'
 
 function OfferCard({ offer, className }) {
   if(!offer) return
