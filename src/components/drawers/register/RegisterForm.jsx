@@ -6,32 +6,37 @@ import DrawerPrimaryButton from '../../ui/buttons/DrawerPrimaryButton'
 import InputOption from '../../ui/inputs/InputOption'
 import { redirect } from 'next/dist/server/api-utils'
 
-const RegisterForm = () => {
-
+const RegisterForm = ({ onCloseDrawer }) => {
   const [userData, setUserData] = useState({});
 
-  // Handle user registration
   const handleRegistration = async () => {
+    console.log(userData);
+  
     try {
-      //here we will need to YEET our actual API if its different
-      const response = await fetch('/api/register', {
+      const response = await fetch('http://127.0.0.1:4000/auth/register', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
         },
         body: JSON.stringify(userData),
       });
-
+  
+      const responseData = await response.json();
+  
       if (response.ok) {
         console.log('Registration successful!');
+        // Close the drawer after successful registration
+        onCloseDrawer();
       } else {
         console.error('Registration failed.');
+        // Display an alert with the reason for unsuccessful registration
+        alert(`Registration failed: ${responseData.message || 'Unknown error'}`);
       }
     } catch (error) {
       console.error('Error during registration:', error);
     }
   };
-
+  
   return (
     <div className='flex flex-col h-full'>
       <Heading>Join the Comwell club</Heading>
@@ -51,7 +56,7 @@ const RegisterForm = () => {
           <InputOption value="male">Male</InputOption>
           <InputOption value="female">Female</InputOption>
         </Input>
-        <Input label="Date of birth" value={userData.name} type="date" onChange={(e) => setUserData(prev => ({...prev, name: e.target.value}))}/>
+        <Input label="Date of birth" value={userData.dateOfBirth} type="date" onChange={(e) => setUserData(prev => ({...prev, dateOfBirth: e.target.value}))}/>
       </div>
 
       <DrawerPrimaryButton onClick={handleRegistration}>Register</DrawerPrimaryButton>

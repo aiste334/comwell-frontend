@@ -1,4 +1,5 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
+import { useSession } from 'next-auth/react'; 
 import FormStepGroup from '../ui/form-steps/FormStepGroup';
 import FormStep from '../ui/form-steps/FormStep';
 import BookingStepLayout from './BookingStepLayout';
@@ -31,6 +32,20 @@ function BookingFormSection({
     <BookingInfoHeader rooms={rooms} dates={dates} selectedHotel={selectedHotel}/>    
   )
 
+    const { data: session } = useSession();
+    const [loggedIn, setLoggedIn] = useState(false);
+
+    useEffect(() => {
+      if (session) {
+        setFullName(session.user.name || '');
+        setEmail(session.user.email || '');
+        setPhoneNumber(session.user.phoneNumber || '');
+        setLoggedIn(true);
+      } else {
+        setLoggedIn(false);
+      }
+    }, [session, setFullName, setEmail, setPhoneNumber]);
+
   return (
     <FormStepGroup currentStep={currentStep}>
       <FormStep onReturn={() => { closeDrawer(); reset() }}>
@@ -48,6 +63,7 @@ function BookingFormSection({
           clickNext={next}
           selectedRoom={selectedRoom}
           infoHeader={infoHeader}
+          disabled={!loggedIn}
         >
           <GuestInfoContent
             email={email}

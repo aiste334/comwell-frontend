@@ -1,5 +1,5 @@
-import React, { useState } from 'react';
-import { signIn, useSession } from 'next-auth/react';
+import React, { useState, useEffect } from 'react';
+import { signIn, signOut, useSession } from 'next-auth/react';
 import DrawerPrimaryButton from '../../ui/buttons/DrawerPrimaryButton';
 import Input from '../../ui/inputs/Input';
 import Paragraph from '../../ui/text/Paragraph';
@@ -11,42 +11,65 @@ import RegisterForm from '../../drawers/register/RegisterForm';
 const LogInForm = () => {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
-  const [drawer, setDrawer] = useState();
+  const [name, setName] = useState('');
+  const [drawer, setDrawer] = useState('');
 
-  // Use useSession directly in the component body
-  const { data: session } = useSession();
+  const { data: session, status } = useSession({
+    onSessionChange: (newSession) => {
+      console.log('Session updated:', newSession);
+    },
+  });
 
-  // Handle sign-in using NextAuth.js
   const handleSignIn = async () => {
-    alert('suicide');
     try {
-      alert('death');
-      // Use NextAuth.js signIn function
-      await signIn('credentials', {
+      console.log("trying");
+      const result = await signIn('credentials', {
+        redirect: false,
         username: email,
         password,
-        redirect: false, // Prevent automatic redirection
       });
-
-      // Do not use useSession inside an asynchronous function
-      const newSession = await fetch('/api/auth/session'); // Replace with your endpoint
-
-      if (newSession) {
-        // The user is authenticated; close the drawer or do something else
-        setDrawer();
-        alert('UGH');
+      if (!result.error) {
+        // Wait for the session to be updated
+        await fetch('/api/auth/session');
+        console.log("success y´all");
+        console.log(result);
+        // The updated session will be logged via the onSessionChange callback
       } else {
-        // The sign-in was not successful; handle accordingly
-        console.error('Login failed');
+        console.error('Login failed:', result.error);
+        alert('Login failed. Please check your credentials.');
       }
     } catch (error) {
-      // Handle any errors during the sign-in process
       console.error('Error during sign-in:', error);
     }
   };
 
+  const handleSignOut = async () => {
+    try {
+      await signOut();
+      alert('Logged out successfully');
+    } catch (error) {
+      console.error('Error during sign-out:', error);
+    }
+  };
+
+  useEffect(() => {
+    // Log the initial session
+    console.log('Initial session:', session);
+  }, [session]);
+
   return (
+    
     <div className='flex flex-col gap-2'>
+       {session ? (
+        <>
+          <Paragraph>Welcome, {session.user.name}!</Paragraph>
+          <div className='border-t-cw-gray-300 border-t-[1px] px-4 pt-6'>
+            <PrimaryButton onClick={handleSignOut}>Log out</PrimaryButton>
+          </div>
+        </>
+      ) : (
+        <>
+
       <Input label='Email' value={email} onChange={(e) => setEmail(e.target.value)} />
       <Input
         label='Password'
@@ -71,11 +94,12 @@ const LogInForm = () => {
         <PrimaryButton onClick={handleSignIn}>Log in</PrimaryButton>
       </div>
 
-      <ShortSideDrawer isOpen={drawer === 'reset'} onClose={() => setDrawer()}></ShortSideDrawer>
+      <ShortSideDrawer isOpen={drawer === 'reset'} onClose={() => setDrawer('')}></ShortSideDrawer>
 
-      <ShortSideDrawer isOpen={drawer === 'register'} onClose={() => setDrawer()}>
-        <RegisterForm />
-      </ShortSideDrawer>
+      <ShortSideDrawer isOpen={drawer === 'register'} onClose={() => setDrawer('')}>
+  <RegisterForm onCloseDrawer={() => setDrawer('')} />
+</ShortSideDrawer>
+      </>)}
     </div>
   );
 };
