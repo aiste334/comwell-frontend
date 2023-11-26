@@ -20,7 +20,7 @@ const fellixFont = localFont({
 
 export default function App({ Component, pageProps }) {
   return (
-      <main className={`relative overflow-y-auto max-h-screen ${fellixFont.className}`} id="root-main">
+      <main className={`relative ${fellixFont.className}`} id="root-main">
             <SessionProvider session={pageProps.session}>
         <Header />
         <div className="w-full bg-hero bg-cover h-full" alt="hero">

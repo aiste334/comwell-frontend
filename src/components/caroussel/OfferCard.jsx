@@ -32,7 +32,7 @@ function OfferCard({ offer, className }) {
             </div>
             <div>
                 <Title>
-                    <spa>Fra </spa>
+                    <span>Fra </span>
                     { oldPrice &&
                         <span className='text-slate-400 line-through'>{oldPrice}</span>
                     }
