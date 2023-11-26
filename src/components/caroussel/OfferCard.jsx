@@ -1,8 +1,8 @@
 import React from 'react'
 import SmallFloaterBlack from '../ui/SmallFloaterBlack'
 import Image from 'next/image'
-import Title from '../ui/Title'
-import STitle from '../ui/STitle'
+import Title from '../ui/text/Title'
+import STitle from '../ui/text/STitle'
 
 function OfferCard({ offer, className }) {
   if(!offer) return
@@ -32,7 +32,7 @@ function OfferCard({ offer, className }) {
             </div>
             <div>
                 <Title>
-                    <spa>Fra </spa>
+                    <span>Fra </span>
                     { oldPrice &&
                         <span className='text-slate-400 line-through'>{oldPrice}</span>
                     }

@@ -3,7 +3,6 @@ import FormStepGroup from '../ui/form-steps/FormStepGroup';
 import FormStep from '../ui/form-steps/FormStep';
 import BookingStepLayout from './BookingStepLayout';
 import RoomBookingDrawerContent from '../drawers/room-selection/RoomBookingDrawerContent';
-import BackArrowButton from '../ui/buttons/circle-buttons/BackArrowButton';
 import ConfirmationSection from './ConfirmationSection';
 import GuestInfoContent from './GuestInfoContent';
 import PaymentInfoContent from './PaymentInfoContent';
@@ -30,6 +29,42 @@ function BookingFormSection({
   const infoHeader = (
     <BookingInfoHeader rooms={rooms} dates={dates} selectedHotel={selectedHotel}/>    
   )
+
+  const bookingData = {
+    user: '', //logged in user
+    hotel: selectedHotel,
+    dates,
+    rooms,
+    personalInfo: {
+      name: fullName,
+      email,
+      phoneNumber,
+      comment,
+      paymentMethod: "Credit Card"
+    }
+  }
+
+  const createBooking = async () => {
+    try {
+      const response = await fetch('http://your-backend-api/bookings', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(bookingData),
+      });
+
+      if (!response.ok) {
+        throw new Error('Booking creation failed');
+      }
+
+      const result = await response.json();
+      console.log('Booking created successfully:', result);
+      // You can update your component state or take other actions upon successful booking creation
+    } catch (error) {
+      console.error('Error creating booking:', error.message);
+      // Handle errors, show a message to the user, etc.
+    }
 
   return (
     <FormStepGroup currentStep={currentStep}>
@@ -94,6 +129,6 @@ function BookingFormSection({
       </FormStep>
     </FormStepGroup>
   );
-}
+}}
 
 export default BookingFormSection;
