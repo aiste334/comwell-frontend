@@ -52,12 +52,13 @@ function BookingFormSection({
 
   const createBooking = async () => {
     try {
-      console.log(selectedHotel)
+      console.log(session?.user.id)
+      console.log({ room: selectedRoom, ...rooms[0] })
       const bookingData = {
         user: session?.user.id, //logged in user
         hotel: selectedHotel._id,
         dates,
-        rooms: [ { room: selectedRoom._id, ...rooms[0] } ],
+        rooms: [ { room: selectedRoom.roomId, ...rooms[0] } ],
         personalInfo: {
           name: fullName,
           email,

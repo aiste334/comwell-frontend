@@ -10,7 +10,7 @@ function OfferCard({ offer, className }) {
   const { image, tag, title, description, price, oldPrice } = offer
 
   return (
-    <div className={`group h-[550px] cursor-pointer flex flex-col border border-slate-200 rounded-lg overflow-hidden keen-slider__slide ${className}`}>
+    <div className={`group cursor-pointer flex flex-col border border-slate-200 rounded-lg overflow-hidden keen-slider__slide ${className}`}>
         <div className="pointer-events-none relative aspect-[1.6/1] overflow-hidden">
             <div className="absolute top-4 left-4 z-10 md:top-6 md:left-6">
             </div>
@@ -20,7 +20,7 @@ function OfferCard({ offer, className }) {
                 }
             </div>
         </div>
-        <div className='p-5 flex flex-col space-y-5 text-left'>
+        <div className='p-5 flex flex-col space-y-2 text-left'>
             <div className='uppercase'>
                 <SmallFloaterBlack>{tag || ''}</SmallFloaterBlack>
             </div>
