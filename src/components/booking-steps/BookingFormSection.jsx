@@ -45,23 +45,29 @@ function BookingFormSection({
     }
   }, [session, setFullName, setEmail, setPhoneNumber]);
 
-  const bookingData = {
-    user: session?.user, //logged in user
-    hotel: selectedHotel,
-    dates,
-    rooms,
-    personalInfo: {
-      name: fullName,
-      email,
-      phoneNumber,
-      comment,
-      paymentMethod: "Credit Card"
-    }
+  const handleBook = async () => {
+    await createBooking()
+    next()
   }
 
   const createBooking = async () => {
     try {
-      const response = await fetch('http://your-backend-api/bookings', {
+      console.log(selectedHotel)
+      const bookingData = {
+        user: session?.user.id, //logged in user
+        hotel: selectedHotel._id,
+        dates,
+        rooms: [ { room: selectedRoom._id, ...rooms[0] } ],
+        personalInfo: {
+          name: fullName,
+          email,
+          phoneNumber,
+          comment,
+          paymentMethod: "Credit Card"
+        }
+      }
+
+      const response = await fetch('http://localhost:4000/bookings', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -80,6 +86,7 @@ function BookingFormSection({
       console.error('Error creating booking:', error.message);
       // Handle errors, show a message to the user, etc.
     }
+  }
 
   return (
     <FormStepGroup currentStep={currentStep}>
@@ -113,7 +120,7 @@ function BookingFormSection({
       <FormStep onReturn={prev}>
         <BookingStepLayout
           bottomButtonText='Book nu'
-          clickNext={next}
+          clickNext={handleBook}
           selectedRoom={selectedRoom}
           disabled={!isPaymentMethodSelected}
           infoHeader={infoHeader}
@@ -145,6 +152,6 @@ function BookingFormSection({
       </FormStep>
     </FormStepGroup>
   );
-}}
+}
 
 export default BookingFormSection;

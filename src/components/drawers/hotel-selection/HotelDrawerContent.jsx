@@ -1,5 +1,4 @@
-import React, { useState } from 'react'
-import hotelData from "@/public/dummy-backend/hotels.json"
+import React, { useEffect, useState } from 'react'
 import HotelCard from './HotelCard'
 import TabGroup from '../../ui/tabs/TabGroup'
 import Tab from '../../ui/tabs/Tab'
@@ -15,8 +14,22 @@ function HotelDrawerContent({ selectedHotel, setSelectedHotel, onClose }) {
         setSelectedHotel(hotel); // Set the selected hotel
     }
 
+    const [hotels, setHotels] = useState([])
+
+    useEffect(() => {
+        async function getHotels () {
+            const response = await fetch('http://localhost:4000/hotels')
+            const data = await response.json()
+            if(!data) return
+            
+            setHotels(data)
+        }
+
+        getHotels()
+    }, [])
+
     const renderHotels = (area) => {
-        const filteredHotels = area ? hotelData.filter(hotel => hotel.area === area) : hotelData
+        const filteredHotels = area ? hotels.filter(hotel => hotel.area === area) : hotels
         return filteredHotels.map(hotel => { return (
             <HotelCard
               key={hotel.name}
