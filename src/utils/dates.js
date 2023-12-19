@@ -58,3 +58,21 @@ export function compareDates(date1, date2) {
     return 1; // date1 is later than date2
   }
 }
+
+export function getTimeObject(hour, minute = 0) {
+  const date = new Date()
+
+  date.setHours(hour, minute, 0, 0)
+
+  return date
+}
+
+export function formatToHoursMinutes(date) {
+   let hours = date.getHours()
+   let minutes = date.getMinutes()
+
+   hours = (hours < 10) ? '0' + hours : hours
+   minutes = (minutes < 10) ? '0' + minutes : minutes
+
+   return hours + ':' + minutes;
+}
