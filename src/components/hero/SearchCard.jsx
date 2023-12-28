@@ -5,7 +5,7 @@ import Select from '@/src/components/ui/select/Select'
 import DoubleSelect from '@/src/components/ui/select/DoubleSelect'
 import PrimaryButton from '@/src/components/ui/buttons/PrimaryButton'
 import SearchSvg from '@/public/icons/search.svg'
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import HotelDrawerContent from '../drawers/hotel-selection/HotelDrawerContent'
 import OccupancySelection from '../drawers/occupancy-selection/OccupancySelection'
 import { getTodayDate, getTomorrowDate, formatToMonthDay, getTimeObject, formatToHoursMinutes } from '@/src/utils/dates'
@@ -15,12 +15,27 @@ import SideDrawer from '../side-drawer/SideDrawer'
 import useFormSteps from '@/src/hooks/useFormSteps'
 import BookingFormSection from '../booking-steps/BookingFormSection'
 import useBookingInfoFormatting from '@/src/hooks/useBookingInfoFormatting'
-
 import NumberSelection from '@/src/components/drawers/number-selection/NumberSelection'
 import TimeSelection from '@/src/components/drawers/time-selection/TimeSelection'
 import OptionSelection from '@/src/components/drawers/option-selection/OptionSelection'
+import InquiryFormSection from '../conference-steps/InquiryFormSection'
+import PartyFormSection from '../party-steps/PartyFormSection'
 
 const SearchCard = ({ className }) => {
+  const [hotels, setHotels] = useState([])
+
+  //fetching this here since JFC i need it in a lot of places
+  useEffect(() => {
+    async function getHotels () {
+        const response = await fetch('http://localhost:4000/hotels')
+        const data = await response.json()
+        if(!data) return
+        
+        setHotels(data)
+    }
+
+    getHotels()
+}, [])
 
   const INITIAL_ROOM = {
     adults: 1,
@@ -61,32 +76,56 @@ const SearchCard = ({ className }) => {
 
 
   const [rooms, setRooms] = useState([INITIAL_ROOM])
-
   const [dates, setDates] = useState(INITIAL_DATES)
-
+  const [arrangement, setArrangement] = useState(null)
   const { startDateString, endDateString, roomCount, guestCount } = useBookingInfoFormatting({ rooms, dates })
-
   const [selectedHotel, setSelectedHotel] = useState(null);
   const hotelString = selectedHotel ? selectedHotel.name : 'Select hotel'
-
   const formSteps = useFormSteps(4)
-
   const [selectedRoom, setSelectedRoom] = useState(null);
+  const [selectedConference, setSelectedConference] = useState(null);
+  const [selectedParty, setSelectedParty] = useState(null);
+  const [times, setTimes] = useState(INITIAL_TIMES)
+  const startTimeString = times?.start ? formatToHoursMinutes(times.start) : 'Select time'
+  const endTimeString = times?.end ? formatToHoursMinutes(times.end) : 'Select time'
+  const [conferenceParticipantCount, setConferenceParticipantCount] = useState(8)
+  const [partyParticipantCount, setPartyParticipantCount] = useState(25)
+
   const onRoomCardClick = (room) => {
     setSelectedRoom(room);
     formSteps.next();
   };
+
+  const onConferenceClick = (conference) => {
+    console.log("conference: " + JSON.stringify(conference));
+    setSelectedConference(conference);
   
-  const [times, setTimes] = useState(INITIAL_TIMES)
-  const startTimeString = times?.start ? formatToHoursMinutes(times.start) : 'Select time'
-  const endTimeString = times?.end ? formatToHoursMinutes(times.end) : 'Select time'
+    const matchedHotel = hotels.find(hotel =>
+      hotel.conferences.some(conf => conf.type === conference.type)
+    );
+  
+    setSelectedHotel(matchedHotel);
+    formSteps.next();
+  };
 
-  const [arrangement, setArrangement] = useState(null)
+  const onPartyClick = (party) => {
+    console.log("Party clicked: ", JSON.stringify(party));
+    setSelectedParty(party);
 
-  const [conferenceParticipantCount, setConferenceParticipantCount] = useState(8)
+    const matchedHotel = hotels.find(hotel =>
+      hotel.parties.some(p => p.type === party.type)
+    );
 
-  const [partyParticipantCount, setPartyParticipantCount] = useState(25)
+    console.log("Matched hotel for party: ", matchedHotel);
 
+    setSelectedHotel(matchedHotel);
+    formSteps.next();
+  };
+  //testing and debugging y´all
+    useEffect(() => {
+      console.log("selected conference: " + JSON.stringify(selectedConference));
+  }, [selectedConference]);
+    
   return (
     <>
       <div className={'bg-white rounded-2xl w-[530px] p-8 drop-shadow-lg ' + className}>
@@ -134,9 +173,47 @@ const SearchCard = ({ className }) => {
           formSteps={formSteps}
         />
       </SideDrawer>
+
+      <SideDrawer isOpen={drawer === 'meeting'} onClose={closeBookingDrawer} className="w-[900px]">
+        <InquiryFormSection 
+          closeDrawer={closeDrawer} 
+          closeBookingDrawer={closeBookingDrawer} 
+          selectedHotel={selectedHotel} 
+          selectedConference={selectedConference} 
+          rooms={rooms}
+          dates={dates}
+          times={times}
+          onConferenceClick={onConferenceClick} 
+          formSteps={formSteps}
+          conferenceParticipantCount={conferenceParticipantCount}
+          hotels={hotels}
+        />
+      </SideDrawer>
       
+      <SideDrawer isOpen={drawer === 'party'} onClose={closeBookingDrawer} className="w-[900px]">
+        <PartyFormSection 
+          closeDrawer={closeDrawer} 
+          closeBookingDrawer={closeBookingDrawer} 
+          selectedHotel={selectedHotel} 
+          selectedRoom={selectedRoom} 
+          rooms={rooms}
+          dates={dates}
+          times={times}
+          onPartyClick={onPartyClick} 
+          formSteps={formSteps}
+          partyParticipantCount={partyParticipantCount}
+          hotels={hotels}
+          arrangement = {arrangement}
+        />
+      </SideDrawer>
+
       <ShortSideDrawer isOpen={drawer === 'hotel'} onClose={closeDrawer}>
-        <HotelDrawerContent selectedHotel={selectedHotel} onClose={closeDrawer} setSelectedHotel={setSelectedHotel}/>
+        <HotelDrawerContent
+            hotels={hotels} 
+            selectedHotel={selectedHotel}
+            onClose={closeDrawer}
+            setSelectedHotel={setSelectedHotel}
+        />
       </ShortSideDrawer>
       <ShortSideDrawer isOpen={drawer === 'rooms'} onClose={closeDrawer}>
         <OccupancySelection rooms={rooms} setRooms={setRooms} onClose={closeDrawer}/>

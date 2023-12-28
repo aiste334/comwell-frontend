@@ -8,25 +8,11 @@ import Heading from '../../ui/text/Heading'
 
 
 
-function HotelDrawerContent({ selectedHotel, setSelectedHotel, onClose }) {
+function HotelDrawerContent({ hotels, selectedHotel, setSelectedHotel, onClose }) {
 
     function handleCardClick(hotel) {
         setSelectedHotel(hotel); // Set the selected hotel
     }
-
-    const [hotels, setHotels] = useState([])
-
-    useEffect(() => {
-        async function getHotels () {
-            const response = await fetch('http://localhost:4000/hotels')
-            const data = await response.json()
-            if(!data) return
-            
-            setHotels(data)
-        }
-
-        getHotels()
-    }, [])
 
     const renderHotels = (area) => {
         const filteredHotels = area ? hotels.filter(hotel => hotel.area === area) : hotels
