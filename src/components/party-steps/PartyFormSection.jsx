@@ -129,7 +129,7 @@ import PartyConfirmation from './PartyConfirmation';
           clickNext={handleBook}
           selectedRoom={selectedRoom}
           infoHeader={infoHeader}
-          disabled={!loggedIn}
+          disabled={!loggedIn || !agreeWithTC}
         >
           <PartyInfoContent
             dates={dates}
