@@ -153,7 +153,10 @@ const SearchCard = ({ className }) => {
             <Select title="Number of participants" onClick={() => {setDrawer('party-participants')}}>{partyParticipantCount}</Select>
             <Select title="Hotel" onClick={() => {setDrawer('hotel')}}>{hotelString}</Select>
             <Select title="Date" onClick={() => {setDrawer('dates')}}>{startDateString} - {endDateString}</Select>
-            <PrimaryButton disabled={!rooms && !dates} onClick={() => {setDrawer('party')}}>
+            <PrimaryButton 
+              disabled={!arrangement || !partyParticipantCount || !hotelString || !startDateString || !endDateString} 
+              onClick={() => {setDrawer('party')}}
+            >              
               Inquire <SearchSvg className="w-4 h-4"/>
             </PrimaryButton>
           </Tab>
